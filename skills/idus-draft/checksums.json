@@ -1,0 +1,16 @@
+{
+  "files": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "acd98e7b62a321392b0dbbd96339d2b5e86c4316bd73662861a29529eaaf5421",
+    "SKILL.md": "902d19b94432956bcf1df33f639403e99b0488945fd6bbc303e0d3d05a2152a5",
+    "THIRD_PARTY_NOTICES.md": "4462f5e0a52df2b4a9ef73dff27e63079997be4d340ae5a4a65ce8451ea5d1d0",
+    "VERSION": "a66780da23103beaf12432b418508966b31a2a3a787f9468a5b6cdaa8667c1ef",
+    "assets/templates/draft_brief.md": "700b7be5d35441d531083861485aadf52605cc341f93175144c44fbd7af1d701",
+    "assets/templates/draft_delivery.md": "b398c323bcbca57a263772bb9f12b0b2ea97a625ac114172f9235177e062f2b9",
+    "references/checklists/draft_check.md": "e3b6f8b8f81dadceb485d4b187f4e851091373d9a1aca3445564d01b0cc1995d",
+    "references/drafting.md": "a77241ebcac490e761a3795ec7f54a09afbb4d8b182b89c4c5c0937a1a51ff92",
+    "references/examples/draft_case.md": "4fb7cb335dddf915122e018dea131375b3d60ab466a4876473e675f316bf3fec"
+  },
+  "generator": "idus-build/1",
+  "version": "0.8.0"
+}

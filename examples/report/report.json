@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "toolkit_version": "0.8.0",
+  "mode": "audit",
+  "summary": "One grammatical issue in the supplied sentence; the underlying results were not provided.",
+  "configuration_revision": null,
+  "documents": [
+    {
+      "id": "doc-1",
+      "description": "Synthetic one-sentence manuscript excerpt",
+      "sha256": "b636968a7c2da2a3640b3c41b34315ca39c74a7b7497e39435a7ce3eef610b09"
+    }
+  ],
+  "coverage": [
+    {
+      "document_id": "doc-1",
+      "scope": "One supplied sentence",
+      "status": "reviewed",
+      "limitations": [
+        "The table and the full manuscript were not supplied."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "F-001",
+      "document_id": "doc-1",
+      "location": "P1 S1",
+      "category": "LANGUAGE",
+      "priority": "low",
+      "confidence": "high",
+      "original": "The results is shown in Table 1.",
+      "proposal": "The results are shown in Table 1.",
+      "rule_ids": [],
+      "reason": "Plural results requires are. The change does not verify the statement about the table.",
+      "wording_verdict": "ACCEPT",
+      "evidence_status": "NOT CHECKED",
+      "evidence_dependent": false,
+      "evidence": [],
+      "authorisation": "Audit requested; manuscript edits are not applied.",
+      "application_status": "proposed",
+      "source_anchor": null
+    }
+  ],
+  "questions": []
+}

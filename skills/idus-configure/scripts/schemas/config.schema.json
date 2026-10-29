@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IDUs project configuration v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "revision", "profile", "rules", "lexicon"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "revision": {"type": "integer", "minimum": 0},
+    "profile": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "base_profile": {"enum": [null, "cus_2026"]},
+        "spelling": {"enum": ["preserve", "en-US", "en-GB", "en-GB-oxford"]},
+        "report_language": {"$ref": "#/$defs/text"},
+        "journal": {"$ref": "#/$defs/text"},
+        "audience": {"$ref": "#/$defs/text"}
+      }
+    },
+    "rules": {"type": "array", "items": {"$ref": "#/$defs/rule"}},
+    "lexicon": {"type": "array", "items": {"$ref": "#/$defs/term"}}
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1, "maxLength": 12000, "pattern": "\\S"},
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "reference"],
+      "properties": {
+        "kind": {"enum": ["author", "editor", "journal", "reviewer", "observation"]},
+        "reference": {"$ref": "#/$defs/text"}
+      }
+    },
+    "rule": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "category", "instruction", "context", "rationale", "source", "status"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^USR-[A-Z0-9][A-Z0-9-]{0,59}$"},
+        "title": {"$ref": "#/$defs/text"},
+        "category": {"enum": ["LANGUAGE", "STRUCTURE", "EVIDENCE", "CONTENT", "STYLE"]},
+        "instruction": {"$ref": "#/$defs/text"},
+        "context": {"$ref": "#/$defs/text"},
+        "rationale": {"$ref": "#/$defs/text"},
+        "source": {"$ref": "#/$defs/source"},
+        "status": {"enum": ["active", "disabled"]},
+        "examples": {
+          "type": "array", "items": {
+            "type": "object", "additionalProperties": false, "required": ["original", "preferred"],
+            "properties": {"original": {"$ref": "#/$defs/text"}, "preferred": {"$ref": "#/$defs/text"}}
+          }
+        }
+      }
+    },
+    "term": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "expression", "action", "preferred", "context", "match_case", "source", "status"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^TERM-[A-Z0-9][A-Z0-9-]{0,58}$"},
+        "expression": {"type": "string", "minLength": 1, "maxLength": 160, "pattern": "^[^\\r\\n]*\\S[^\\r\\n]*$"},
+        "action": {"enum": ["prefer", "preserve", "flag"]},
+        "preferred": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "context": {"$ref": "#/$defs/text"},
+        "match_case": {"type": "boolean"},
+        "source": {"$ref": "#/$defs/source"},
+        "status": {"enum": ["active", "disabled"]}
+      }
+    }
+  }
+}

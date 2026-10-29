@@ -1,0 +1,33 @@
+# Review helpers
+
+Optional Python 3.10+ standard-library tools. Resolve paths from this skill's actual directory.
+
+```text
+python scripts/idus.py config show WORKSPACE
+python scripts/idus.py scan-terms WORKSPACE text-export.txt
+python scripts/idus.py validate-report report.json --snapshot doc-1=text-export.txt
+python scripts/apply_edits.py WORKSPACE edits.txt
+```
+
+Edit files are UTF-8 blocks (repeat headers/blocks as needed):
+
+```text
+@@ relative/path.txt
+<<<
+old text
+===
+new source text
+>>>
+```
+
+Old text matches across whitespace; `--mode py` also handles supported adjacent double-quoted
+literal joins. New text is literal source, so preserve escaping/markup. Paths stay within WORKSPACE.
+
+Settings: [configuration.md](../configuration.md). Report JSON: [contracts.md](../contracts.md).
+The applier defaults to dry-run; `--apply` requires existing authorisation and verified source-form
+anchors. It checks exact, unique, non-overlapping matches before writing; Python mode supports only the documented literal-join boundaries. Preserve a baseline/diff and inspect output. Late failures attempt
+rollback, not a guarantee of transactionality against all concurrent writes or crashes.
+
+Spelling/comma/term scanners only list candidates; inspect names, code, quotes and context.
+Validation checks structure and explicit snapshots, not scientific truth. Helpers do not replace
+reading the text or verifying an edit. Contribution preparation belongs to `idus-configure`.

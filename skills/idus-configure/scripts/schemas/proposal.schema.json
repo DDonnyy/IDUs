@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IDUs shared-rule proposal, not an accepted rule",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "title", "base_version", "change", "target_ids", "instruction", "scope", "rationale", "sources", "examples", "counterexamples", "overlap_review", "privacy"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "id": {"type": "string", "pattern": "^PROP-[A-Z0-9][A-Z0-9-]{0,59}$"},
+    "title": {"$ref": "#/$defs/text"},
+    "base_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "change": {"enum": ["new_rule", "refine_rule", "lexicon", "profile"]},
+    "target_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[A-Z]+[0-9]+$"}},
+    "instruction": {"$ref": "#/$defs/text"},
+    "scope": {"$ref": "#/$defs/text"},
+    "rationale": {"$ref": "#/$defs/text"},
+    "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+    "examples": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/example"}},
+    "counterexamples": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/counterexample"}},
+    "overlap_review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "corpus_sha256", "summary", "comparisons"],
+      "properties": {
+        "status": {"enum": ["pending", "reviewed"]},
+        "corpus_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+        "summary": {"$ref": "#/$defs/text"},
+        "comparisons": {"type": "array", "items": {"$ref": "#/$defs/comparison"}}
+      }
+    },
+    "privacy": {
+      "type": "object", "additionalProperties": false, "required": ["status", "note"],
+      "properties": {
+        "status": {"enum": ["unreviewed", "safe_to_share"]},
+        "note": {"$ref": "#/$defs/text"}
+      }
+    }
+  },
+  "$defs": {
+    "text": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "reference", "interpretation"],
+      "properties": {
+        "kind": {"enum": ["reviewer", "language_expert", "journal", "author", "synthetic"]},
+        "reference": {"$ref": "#/$defs/text"},
+        "interpretation": {"enum": ["explicit_comment", "inferred_from_edit", "stated_preference", "synthetic"]}
+      }
+    },
+    "example": {
+      "type": "object", "additionalProperties": false,
+      "required": ["original", "proposed", "context", "reason", "sharing_basis"],
+      "properties": {
+        "original": {"$ref": "#/$defs/text"}, "proposed": {"$ref": "#/$defs/text"},
+        "context": {"$ref": "#/$defs/text"}, "reason": {"$ref": "#/$defs/text"},
+        "sharing_basis": {"enum": ["synthetic", "public_excerpt", "authorised_excerpt"]}
+      }
+    },
+    "counterexample": {
+      "type": "object", "additionalProperties": false,
+      "required": ["text", "context", "why_keep", "sharing_basis"],
+      "properties": {
+        "text": {"$ref": "#/$defs/text"}, "context": {"$ref": "#/$defs/text"},
+        "why_keep": {"$ref": "#/$defs/text"},
+        "sharing_basis": {"enum": ["synthetic", "public_excerpt", "authorised_excerpt"]}
+      }
+    },
+    "comparison": {
+      "type": "object", "additionalProperties": false,
+      "required": ["rule_id", "relationship", "reason"],
+      "properties": {
+        "rule_id": {"type": "string", "pattern": "^[A-Z]+[0-9]+$"},
+        "relationship": {"enum": ["duplicate", "refines", "conflicts", "related", "distinct"]},
+        "reason": {"$ref": "#/$defs/text"}
+      }
+    }
+  }
+}

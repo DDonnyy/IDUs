@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "id": "PROP-REFERENCE-EXCEPTION",
+  "title": "Clarify that a pronoun with one accessible referent can stay",
+  "base_version": "0.8.0",
+  "change": "refine_rule",
+  "target_ids": [
+    "B1"
+  ],
+  "instruction": "Keep an ordinary pronoun when its referent is unambiguous in the supplied context. Name the referent only when readers could reasonably select different antecedents; do not guess it from absent evidence.",
+  "scope": "Reference checks in scientific prose. This candidate illustrates a possible clarification to B1, subject to overlap review; it is not an accepted new requirement.",
+  "rationale": "A worked keep case can help prevent unnecessary repetition while preserving the existing ambiguity check.",
+  "sources": [
+    {
+      "kind": "synthetic",
+      "reference": "Toolkit demonstration, not a real expert correction or report.",
+      "interpretation": "synthetic"
+    }
+  ],
+  "examples": [
+    {
+      "original": "We compared the model with a baseline. It underestimated travel time.",
+      "proposed": "We compared the model with a baseline. The model underestimated travel time.",
+      "context": "In this synthetic scenario, the author has confirmed that the model, rather than the baseline, underestimated travel time.",
+      "reason": "Name the intended referent using the supplied clarification; without that clarification ask the author instead.",
+      "sharing_basis": "synthetic"
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "We fitted a model. It predicts travel time.",
+      "context": "Only the model is an accessible referent in the supplied context.",
+      "why_keep": "The pronoun is clear; replacing it with the noun adds no needed disambiguation.",
+      "sharing_basis": "synthetic"
+    }
+  ],
+  "overlap_review": {
+    "status": "pending",
+    "corpus_sha256": null,
+    "summary": "Demonstration only. Read B1 and the no-change guidance, and check upstream before deciding whether an extra example has value or is already covered.",
+    "comparisons": [
+      {
+        "rule_id": "B1",
+        "relationship": "related",
+        "reason": "B1 already targets ambiguous reference; this may be redundant or useful only as calibration. No novelty claim has been made."
+      }
+    ]
+  },
+  "privacy": {
+    "status": "unreviewed",
+    "note": "Synthetic template with deliberately pending declarations; inspect the actual edited payload before marking it safe to share."
+  }
+}

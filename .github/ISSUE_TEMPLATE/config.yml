@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contribution workflow
+    url: https://github.com/DDonnyy/IDUs/blob/main/CONTRIBUTING.md
+    about: Read the scope, provenance, overlap and example requirements before proposing shared guidance.

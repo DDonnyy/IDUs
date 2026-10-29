@@ -1,0 +1,12 @@
+{
+  "author": {
+    "name": "IDUs contributors"
+  },
+  "description": "IDUs — IDU-scientist: academic drafting, manuscript review and expert-informed community rules.",
+  "homepage": "https://github.com/DDonnyy/IDUs",
+  "license": "Apache-2.0",
+  "name": "idus",
+  "repository": "https://github.com/DDonnyy/IDUs",
+  "skills": "./skills/",
+  "version": "0.8.0"
+}

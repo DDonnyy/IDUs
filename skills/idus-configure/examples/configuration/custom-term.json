@@ -1,0 +1,13 @@
+{
+  "id": "TERM-001",
+  "expression": "transit",
+  "action": "prefer",
+  "preferred": "public transport",
+  "context": "Ordinary references to public transport; retain quoted or defined terms such as transit desert.",
+  "match_case": false,
+  "source": {
+    "kind": "author",
+    "reference": "Synthetic vocabulary preference example."
+  },
+  "status": "active"
+}

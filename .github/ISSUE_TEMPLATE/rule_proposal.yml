@@ -1,0 +1,50 @@
+name: Rule proposal from expert feedback
+description: Propose a scoped rule, clarification or calibration example.
+title: "[Rule] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use synthetic or shareable examples. Keep confidential manuscripts, reviews and identities private.
+        An expert edit is evidence to assess; maintainers decide whether the guidance belongs in IDUs.
+  - type: input
+    id: version
+    attributes:
+      label: IDUs version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source and interpretation
+      description: Reviewer, teacher, tutor, journal or author? Distinguish an explicit comment from an inferred reason; use a sanitised reference.
+    validations:
+      required: true
+  - type: textarea
+    id: rule
+    attributes:
+      label: Proposed guidance and scope
+      description: Explain when it applies, why it helps, and exceptions. A local or journal preference may belong in a profile.
+    validations:
+      required: true
+  - type: textarea
+    id: overlap
+    attributes:
+      label: Existing rules and proposals compared
+      description: List related IDs/PRs, semantic overlaps and the smallest useful amendment. A keyword search alone cannot prove novelty.
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Fix and keep examples
+      description: Give before/after, context, reason, a legitimate unchanged case and their sharing basis.
+    validations:
+      required: true
+  - type: checkboxes
+    id: sharing
+    attributes:
+      label: Sharing review
+      options:
+        - label: I reviewed the examples and source reference for confidentiality and permission to share.
+          required: true

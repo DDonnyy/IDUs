@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "status": "manual host evaluation fixtures; no model execution implied",
+  "cases": [
+    {
+      "id": "A01",
+      "prompt": "Проверь мой английский Introduction: [авторский текст].",
+      "expected_skill": "idus-review",
+      "expected_mode": "audit",
+      "checks": [
+        "Return located findings",
+        "Do not author absent sections"
+      ]
+    },
+    {
+      "id": "A02",
+      "prompt": "Используй IDUs и исправь проверенные языковые ошибки в этой рукописи.",
+      "expected_skill": "idus-review",
+      "expected_mode": "edit",
+      "checks": [
+        "Use existing permission",
+        "Preserve scientific meaning"
+      ]
+    },
+    {
+      "id": "A03",
+      "prompt": "Настрой IDUs для папки моей статьи: используй Oxford British spelling.",
+      "expected_skill": "idus-configure",
+      "expected_mode": "configure",
+      "checks": [
+        "Persist project configuration only",
+        "Do not start a manuscript review"
+      ]
+    },
+    {
+      "id": "A04",
+      "prompt": "Добавь в словарь IDUs этот термин с таким контекстом: [правило автора].",
+      "expected_skill": "idus-configure",
+      "expected_mode": "configure",
+      "checks": [
+        "Record provenance and context",
+        "Keep installed package unchanged"
+      ]
+    },
+    {
+      "id": "A05",
+      "prompt": "Сочини научную статью по этой теме.",
+      "expected_skill": "idus-draft",
+      "expected_mode": "draft",
+      "checks": [
+        "Topic-only input produces a labelled scaffold and author questions",
+        "Do not invent a performed study or require an existing manuscript"
+      ]
+    },
+    {
+      "id": "A06",
+      "prompt": "Используй idus-review и напиши Abstract с нуля по моим данным.",
+      "expected_skill": "idus-draft",
+      "expected_mode": "draft",
+      "checks": [
+        "Route the first-version request from review to draft instructions",
+        "Compose an Abstract only from supplied study content",
+        "Mark missing methods/results rather than invent them"
+      ]
+    },
+    {
+      "id": "A07",
+      "prompt": "Настрой pytest для моего Python-пакета.",
+      "expected_skill": null,
+      "expected_mode": null,
+      "checks": [
+        "Do not configure IDUs or review a manuscript"
+      ]
+    },
+    {
+      "id": "A08",
+      "prompt": "Объясни, что такое Oxford comma.",
+      "expected_skill": null,
+      "expected_mode": null,
+      "checks": [
+        "A general language question alone is not a manuscript review"
+      ]
+    },
+    {
+      "id": "A09",
+      "prompt": "Поправь скрипт сборки плагина IDUs.",
+      "expected_skill": null,
+      "expected_mode": null,
+      "checks": [
+        "Maintain the toolkit using repository instructions",
+        "Do not start scientific text review"
+      ]
+    },
+    {
+      "id": "A10",
+      "prompt": "Prepare a shared IDUs rule proposal from these tutor corrections.",
+      "expected_skill": "idus-configure",
+      "expected_mode": "configure",
+      "checks": [
+        "Compare existing rules semantically",
+        "Preserve source interpretation and fix/keep cases",
+        "Prepare a local proposal without sending a PR"
+      ]
+    },
+    {
+      "id": "A11",
+      "prompt": "Review this manuscript using the supplied reviewer corrections.",
+      "expected_skill": "idus-review",
+      "expected_mode": "audit",
+      "checks": [
+        "Check expert edits for preserved meaning",
+        "Suggest a contribution only for a useful reusable gap",
+        "Do not export private feedback or submit a PR during routine review"
+      ]
+    },
+    {
+      "id": "A12",
+      "prompt": "Submit this prepared IDUs rule proposal as a draft PR to the repository I specified.",
+      "expected_skill": "idus-configure",
+      "expected_mode": "configure",
+      "checks": [
+        "Reuse explicit submission permission",
+        "Recheck current upstream overlap and target remote",
+        "Send only the reviewed proposal and intended changes",
+        "Leave maintainer acceptance pending"
+      ]
+    },
+    {
+      "id": "A13",
+      "prompt": "Draft Methods and Results in English from these research notes: [notes with findings and conditions].",
+      "expected_skill": "idus-draft",
+      "expected_mode": "draft",
+      "checks": [
+        "Compose supported sections without requiring existing prose",
+        "Retain conditions, numbers and work status",
+        "Return draft and short author notes, not review findings"
+      ]
+    },
+    {
+      "id": "A14",
+      "prompt": "Reshape this rough first version into coherent scientific prose.",
+      "expected_skill": "idus-draft",
+      "expected_mode": "draft",
+      "checks": [
+        "Organise paragraphs within author intent",
+        "Preserve scientific content and existing versions within permission",
+        "Use one brief content check, without a full audit"
+      ]
+    },
+    {
+      "id": "A15",
+      "prompt": "Audit these research notes for manuscript language errors; no manuscript text is supplied.",
+      "expected_skill": "idus-review",
+      "expected_mode": "audit",
+      "checks": [
+        "Identify absent review prose",
+        "Offer draft without silently switching to composition"
+      ]
+    },
+    {
+      "id": "A16",
+      "prompt": "Draft Methods from these notes: comparisons completed; sensitivity analysis planned.",
+      "expected_skill": "idus-draft",
+      "expected_mode": "draft",
+      "checks": [
+        "Do not convert planned analysis into completed work",
+        "Mark missing reproducibility details and continue supported content"
+      ]
+    }
+  ]
+}

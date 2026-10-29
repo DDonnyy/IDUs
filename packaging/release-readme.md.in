@@ -1,0 +1,20 @@
+# IDUs — IDU-scientist
+
+Version {{VERSION}}. Self-contained academic writing skills:
+
+- [idus-draft](skills/idus-draft/SKILL.md): first versions from research notes and author intent.
+- [idus-review](skills/idus-review/SKILL.md): audit and authorised edits of existing prose.
+- [idus-configure](skills/idus-configure/SKILL.md): project rules/terms and expert-derived proposals.
+
+Copy complete skill folders to a supported skill directory, or use:
+
+```text
+npx skills add DDonnyy/IDUs --copy
+```
+
+Claude can load this plugin with `claude --plugin-dir path/to/IDUs`. The repository also supplies
+portable/Codex manifests and a Claude marketplace. Runtime draft needs no Python; optional helpers
+in review/configure use Python 3.10+ standard library. Install only the skills needed.
+
+Original toolkit: Apache-2.0, [LICENSE](LICENSE), [NOTICE](NOTICE),
+[source rights](THIRD_PARTY_NOTICES.md). Private archives/project settings are excluded.

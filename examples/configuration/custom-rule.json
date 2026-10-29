@@ -1,0 +1,19 @@
+{
+  "id": "USR-001",
+  "title": "Name competing comparison baselines",
+  "category": "LANGUAGE",
+  "instruction": "Name the compared quantity and baseline when more than one is plausible. Resolve them only from supplied text or evidence; otherwise ask the author.",
+  "context": "Results sentences containing several possible comparison baselines.",
+  "rationale": "The reader should not have to infer which estimate is compared.",
+  "source": {
+    "kind": "author",
+    "reference": "Synthetic configuration example; adapt to the actual project."
+  },
+  "status": "active",
+  "examples": [
+    {
+      "original": "The prediction error was measured. It was lower in these cities.",
+      "preferred": "The prediction error was measured. The prediction error was lower in these cities."
+    }
+  ]
+}

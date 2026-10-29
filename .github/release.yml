@@ -1,0 +1,17 @@
+changelog:
+  exclude:
+    labels:
+      - skip-changelog
+  categories:
+    - title: Rules, examples and language guidance
+      labels:
+        - rules
+    - title: Skills, tooling and installation
+      labels:
+        - tooling
+    - title: Documentation
+      labels:
+        - documentation
+    - title: Other changes
+      labels:
+        - '*'

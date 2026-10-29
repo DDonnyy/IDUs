@@ -1,0 +1,24 @@
+name: Bug or skill behaviour problem
+description: Report a reproducible packaging, helper or editorial failure.
+title: "[Bug] "
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: IDUs version, agent/host, model and OS
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproducible input and steps
+      description: Use a synthetic or shareable input. Include the selected skill/mode and actual output; remove credentials and private manuscript material.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour and reason
+      description: Explain the meaning change, false positive, missing coverage or software failure. Include a rule ID when relevant.
+    validations:
+      required: true

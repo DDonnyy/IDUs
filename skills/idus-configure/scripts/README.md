@@ -1,0 +1,20 @@
+# Configuration helpers
+
+Python 3.10+, standard library. Resolve scripts from the actual installed skill directory.
+
+```text
+python scripts/idus.py config show WORKSPACE
+python scripts/idus.py config add-rule WORKSPACE examples/configuration/custom-rule.json
+python scripts/idus.py config add-term WORKSPACE term.json --apply
+python scripts/idus.py proposal overlaps proposal.json
+python scripts/idus.py proposal export proposal.json NEW_DIRECTORY
+```
+
+[configuration.md](../references/configuration.md) defines schemas, revisions, update/remove/import commands,
+backups, stale-change protection and legacy configuration. Writes preview by default; `--apply`
+uses existing authorisation. Add does not overwrite an ID. Scans only list literal candidates.
+
+[contributions.md](../references/contributions.md) defines provenance, semantic overlap, sharing review and
+export prerequisites. Search hints cannot prove novelty. Exports create only a proposal, PR body
+and checksums; no Git/network operation or source attachment occurs. Structure/declarations do not
+prove editorial validity, privacy or scientific truth. Review validators are in `idus-review`.

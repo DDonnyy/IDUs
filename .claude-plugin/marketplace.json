@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "description": "IDUs — IDU-scientist: academic drafting, manuscript review and expert-informed community rules.",
+    "version": "0.8.0"
+  },
+  "name": "idus",
+  "owner": {
+    "name": "IDUs contributors"
+  },
+  "plugins": [
+    {
+      "description": "IDUs — IDU-scientist: academic drafting, manuscript review and expert-informed community rules.",
+      "name": "idus",
+      "source": "./"
+    }
+  ]
+}
