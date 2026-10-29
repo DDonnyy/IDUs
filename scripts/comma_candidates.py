@@ -13,6 +13,8 @@ import argparse
 import re
 from pathlib import Path
 
+from cli_io import configure_utf8_output
+
 OPENERS = {
     "In", "At", "On", "For", "Over", "Within", "Where", "When", "If", "Since", "Because", "Although", "Though",
     "After", "Before", "Of", "Among", "Across", "Against", "Under", "Below", "Above", "Outside", "Inside",
@@ -57,6 +59,7 @@ def introductory(sentence: str) -> list[str]:
 
 
 def main() -> None:
+    configure_utf8_output()
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("files", nargs="+", type=Path)
     args = parser.parse_args()

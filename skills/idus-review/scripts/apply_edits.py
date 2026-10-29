@@ -33,6 +33,8 @@ import sys
 import tempfile
 from pathlib import Path, PureWindowsPath
 
+from cli_io import configure_utf8_output
+
 BOUNDS = {
     "text": r"\s+",
     "py": r'(?:\s+|[ \t]+"\r?\n[ \t]*"[ \t]*|"\r?\n[ \t]*"[ \t]+)',
@@ -189,6 +191,7 @@ def write_prepared(prepared: dict[Path, tuple[bytes, bytes]]) -> None:
 
 
 def main() -> None:
+    configure_utf8_output()
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("root", type=Path)
     parser.add_argument("edits", type=Path)

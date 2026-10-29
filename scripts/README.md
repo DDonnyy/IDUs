@@ -2,6 +2,7 @@
 
 These scripts use only the Python standard library. Run the examples below from
 the repository root, replacing the manuscript and review paths with your own.
+Runtime helpers write UTF-8 to stdout/stderr, including redirected output on Windows.
 They assist an already verified review; they cannot decide whether wording keeps
 the authors' scientific meaning.
 

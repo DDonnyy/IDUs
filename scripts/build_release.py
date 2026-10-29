@@ -31,6 +31,7 @@ CONFIGURE_CORE = (*RULE_CORE, "configuration.md", "contributions.md", "drafting.
 CORE = tuple(dict.fromkeys((*REVIEW_CORE, *CONFIGURE_CORE, *DRAFT_CORE)))
 COMMON_HELPERS = (
     "idus.py",
+    "cli_io.py",
     "paperidu.py",
     "configuration.py",
     "schema_validation.py",
