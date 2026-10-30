@@ -4,6 +4,8 @@ Mark unavailable checks explicitly; an unperformed check is not a pass.
 
 - Requested mode, current source, reviewed scope, settings and actual evidence are clear.
 - Question → method → result → conclusion is checked within the supplied scope.
+- Academic readability was assessed; each STYLE proposal names a reader benefit, and the complete
+  replacement/neighbours were checked after combining related changes.
 - Proposals preserve meaning, numbers, units, uncertainty, conditions, terms and citations.
 - Wording verdict, empirical support, permission and application status remain separate.
 - Exact snapshot quotations and unique current source-form anchors precede any applied edit.

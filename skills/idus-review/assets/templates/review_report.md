@@ -3,6 +3,7 @@
 - Mode, toolkit/configuration version, source snapshot and reviewed scope:
 - Evidence/sections available, inspected and unavailable:
 - Brief argument map, when relevant:
+- Academic-readability coverage and reader benefit of STYLE proposals:
 
 ## Findings
 

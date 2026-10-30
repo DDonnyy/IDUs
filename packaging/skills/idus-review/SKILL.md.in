@@ -9,7 +9,9 @@ Use `audit` for findings or `edit` for verified changes already authorised. Revi
 first versions from notes belong to `idus-draft`. Report in the user's language.
 
 Follow [the review workflow](references/ALGORITHM.md). Read the supplied argument before editing,
-then load only the relevant structure, language or evidence sections it links. Preserve scientific
+then assess academic readability as well as correctness. A grammatical sentence can merit a STYLE
+proposal when a clearer action, referent or parallel has a concrete reader benefit; name that benefit.
+Load only the relevant guidance. Preserve scientific
 meaning, uncertainty, numerical conditions and defined terms. Keep wording/evidence/application
 statuses separate. Clear prose can remain unchanged; there is no edit quota.
 

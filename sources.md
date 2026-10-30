@@ -37,6 +37,10 @@ A documented comparison of author-supplied text with language-expert edits. Supp
 language checks, wording candidates and contextual punctuation advice. Distinguish an explicit
 comment from an inferred reason; accepted edits can contain slips or change scientific meaning.
 The complete comparison and individual decisions stay in the private source archive.
+Further comparisons inform positive academic calibration: direct subject/action relations,
+explicit parallels and named quantities. Reasons inferred from edits are analyst interpretations.
+Public examples are synthetic; useful readability improvements are distinguished from mandatory
+grammar repairs and private house style.
 
 ## S-AUDITS
 
