@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "id": "PROP-ACADEMIC-READABILITY",
+  "title": "Review academic readability with explicit meaning-preserving calibration",
+  "base_version": "0.8.0",
+  "change": "refine_rule",
+  "target_ids": [
+    "C1",
+    "C2",
+    "C8",
+    "A4"
+  ],
+  "instruction": "C1/C2: Review academic readability as well as grammatical correctness. A grammatical sentence can merit a STYLE proposal when a more direct subject/action, an explicit parallel or a named quantity has a concrete reader benefit. Restore an omitted subject or verb when it prevents misreading or materially eases a difficult parallel; keep immediately recoverable gapping. Give the complete replacement and its benefit; retain clear prose and legitimate technical agency. C8: Preserve whether a comparison states an inequality or a dependency; do not turn one into the other. A4: Keep rank or ratio descriptions distinct from accuracy against ground truth, including the subset actually labelled in a caption. Reread combined replacements for syntax and scientific meaning.",
+  "scope": "Academic editing of existing English scientific prose, especially Methods definitions and Results/caption explanations. No edit quota, blanket word/voice ban, forced expansion of clear ellipsis or new journal house style.",
+  "rationale": "Private expert-edit comparisons revealed useful readability changes to grammatical prose that a conservative review could miss. Existing C1/C2, C8 and A4 provide the principles; this proposal adds a positive editing criterion and worked fix/keep cases instead of new rule IDs or a synonym dictionary.",
+  "sources": [
+    {
+      "kind": "language_expert",
+      "reference": "Private language-expert edit comparisons; source passages, identities and complete reviews are withheld. Reader benefits and safeguards are the contributor's interpretations.",
+      "interpretation": "inferred_from_edit"
+    },
+    {
+      "kind": "synthetic",
+      "reference": "All examples and counterexamples in this proposal are newly constructed illustrations; they are not quotations from the private manuscripts.",
+      "interpretation": "synthetic"
+    }
+  ],
+  "examples": [
+    {
+      "original": "In the second group, where records are incomplete, there are six sites.",
+      "proposed": "The second group, where records are incomplete, includes six sites.",
+      "context": "Synthetic group-size result whose long opening separates the group from its count.",
+      "reason": "Use the group as a direct subject while preserving six and the incomplete-record condition. The original is grammatical; the improvement is STYLE.",
+      "sharing_basis": "synthetic"
+    },
+    {
+      "original": "Source A records the entrance, source B the platform on the other side of the station.",
+      "proposed": "Source A records the entrance; source B records the platform on the other side of the station.",
+      "context": "Synthetic source comparison where the long parallel is difficult to recover.",
+      "reason": "Repeat the short verb to make both source/action relations explicit; do not expand every clear elliptical clause.",
+      "sharing_basis": "synthetic"
+    },
+    {
+      "original": "The larger the two regions, the closer their centres.",
+      "proposed": "The distance between the centres is less than the mean radius of the two regions.",
+      "context": "Synthetic notes establish only d < (r1+r2)/2, with no dependency between changes in d and changes in r.",
+      "reason": "Express the supplied inequality instead of an unsupported covariation claim.",
+      "sharing_basis": "synthetic"
+    },
+    {
+      "original": "The underestimating and overestimating sites are labelled.",
+      "proposed": "The sites with the lowest and highest ratios are labelled.",
+      "context": "Synthetic figure labels selected extreme ratios between two estimates; neither estimate is established as ground truth.",
+      "reason": "Preserve rank and the selected subset without adding an accuracy criterion.",
+      "sharing_basis": "synthetic"
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "There are two limitations.",
+      "context": "A short clear introduction to a supplied two-item list.",
+      "why_keep": "A direct existential introduction is useful; there is no blanket ban on there are.",
+      "sharing_basis": "synthetic"
+    },
+    {
+      "text": "The model predicts travel time.",
+      "context": "The model and target quantity are already defined.",
+      "why_keep": "Conventional scientific agency is clear; a more formal synonym adds no reader benefit.",
+      "sharing_basis": "synthetic"
+    },
+    {
+      "text": "The higher the applied voltage, the larger the measured current.",
+      "context": "A synthetic experiment establishes this dependency over the stated range.",
+      "why_keep": "The comparative correlative correctly expresses the supplied relation.",
+      "sharing_basis": "synthetic"
+    },
+    {
+      "text": "The model underestimates travel time relative to the observed traces.",
+      "context": "Observed traces are the supplied justified reference in this synthetic test.",
+      "why_keep": "The baseline and meaning of underestimation are explicit; accuracy language is appropriate.",
+      "sharing_basis": "synthetic"
+    }
+  ],
+  "overlap_review": {
+    "status": "reviewed",
+    "corpus_sha256": "b3085c5620043daf50d4da16ccfc2611b16fab5e86b6605cd3213e1164f197ec",
+    "summary": "Read all seven canonical corpus resources and neighbouring rules semantically at main 8cd1c464afa28f497fed25c1c40c6744a6d40d6d. Open PRs checked on 2026-10-30: only dependency update #1, with no editorial-rule overlap. C1/C2/C8/A4 are refined; no new IDs. This PR also proposes activation changes, so its head corpus will intentionally differ from this base fingerprint. Recheck if the base changes.",
+    "comparisons": [
+      {
+        "rule_id": "C2",
+        "relationship": "refines",
+        "reason": "Adds a concrete reader-benefit criterion for grammatical but difficult academic prose and positive calibration."
+      },
+      {
+        "rule_id": "C8",
+        "relationship": "refines",
+        "reason": "Adds inequality-versus-dependency calibration within the existing comparison rule."
+      },
+      {
+        "rule_id": "A4",
+        "relationship": "refines",
+        "reason": "Adds caption rank-versus-truth and labelled-subset calibration."
+      },
+      {
+        "rule_id": "C1",
+        "relationship": "refines",
+        "reason": "Recognise a materially difficult parallel as a reason to restore a verb while retaining immediately recoverable gapping."
+      },
+      {
+        "rule_id": "C4",
+        "relationship": "related",
+        "reason": "Finite clauses already help overloaded constructions; no ban on absolute constructions is added."
+      },
+      {
+        "rule_id": "B1",
+        "relationship": "related",
+        "reason": "Names must resolve the correct referent; clear pronouns remain valid."
+      },
+      {
+        "rule_id": "A6",
+        "relationship": "related",
+        "reason": "Negation, quantifiers and claim strength already require preservation."
+      },
+      {
+        "rule_id": "ME9",
+        "relationship": "related",
+        "reason": "Direct action wording extends the existing nominalisation guidance without banning technical nouns."
+      },
+      {
+        "rule_id": "EC3",
+        "relationship": "related",
+        "reason": "Baseline and comparison direction safeguards remain unchanged."
+      },
+      {
+        "rule_id": "EC5",
+        "relationship": "related",
+        "reason": "Two source estimates do not establish ground truth; caption example makes that guard observable."
+      },
+      {
+        "rule_id": "EC8",
+        "relationship": "related",
+        "reason": "The equation defines the compared quantity and scale; no new scientific-validation claim."
+      },
+      {
+        "rule_id": "RC5",
+        "relationship": "related",
+        "reason": "Labels need to describe the displayed metric and subset."
+      }
+    ]
+  },
+  "privacy": {
+    "status": "safe_to_share",
+    "note": "Inspected payload contains only generalised provenance and synthetic examples. No manuscript excerpts, names, expert comments, source PDFs/DOCX, local settings or private paths. Public PR submission authorised by the user on 2026-10-30."
+  }
+}

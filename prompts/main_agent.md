@@ -45,11 +45,15 @@ considering side effects. Keep accepted human edits unless a specific error/conf
 Read the argument before editing sentences; for partial text state unavailable whole-paper checks.
 Assess Introduction context/research/gap/aim, Methods material/procedure/analysis, and Results-to-
 Conclusion consistency as applicable. Diagnose concrete grammar, referent, syntax, terminology,
-claim or style problems. First person, passive voice, technical repetition, conventional model/
+claim or style problems. Include academic readability: a more direct subject/action, the right named
+quantity or a clearer parallel can justify a STYLE proposal even when the original is grammatical.
+Give the full replacement and its concrete reader benefit; formality alone is insufficient.
+First person, passive voice, technical repetition, conventional model/
 document subjects, short paragraphs and em dashes are not automatic errors. Keep clear prose;
 there is no change quota or AI-authorship inference.
 
-Verify each proposed sentence in context. Match its exact quotation to the current text snapshot;
+Reread the full sentence and neighbours after combining related edits; verify syntax and meaning.
+Match its exact quotation to the current text snapshot;
 application also needs a unique current source-form anchor. Exported text may differ from TeX or
 joined Python literals. Recheck combined edits, numbers, terms and affected output after application.
 Without reliable source mapping, report a proposal rather than applying it automatically.

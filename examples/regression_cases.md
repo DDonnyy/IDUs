@@ -74,3 +74,18 @@ These cases explicitly request `draft`; do not run the detailed review workflow.
 | T40 | User asks to reshape a rough first version for coherent paragraphs | Reorganise/rewrite within intent, preserving facts and a baseline/diff if overwriting was authorised; no per-sentence findings table or edit quota |
 | T41 | Draft skill alone is installed, with no Python or review/configure skill | Use the packaged compact guide/templates; keep installed files unchanged and do not depend on other skills |
 | T42 | User requests audit, but supplies only research notes | Identify missing review text and offer draft; do not silently replace the requested audit with composition |
+
+## Academic readability calibration (T43–T49)
+
+Synthetic cases. A useful STYLE improvement can apply to grammatical prose; name its concrete
+reader benefit and preserve the scientific proposition. A clearer sentence need not be longer.
+
+| ID | Situation | Expected decision |
+|---|---|---|
+| T43 | `In the second group, where records are incomplete, there are six sites.` The long opening burdens the group-size result. | Consider `The second group, where records are incomplete, includes six sites.` Explain the direct subject/action; retain the condition and six. Do not ban existential constructions. |
+| T44 | `Source A records the entrance, source B the platform on the other side of the station.` The long parallel is difficult to recover. | Consider repeating records and separating the clauses; C1/C2. Keep immediately recoverable short gapping elsewhere. |
+| T45 | Several lengths compete in `The parameter increases with length.` Author confirms segment length. | Name segment length; do not infer radius/span from proximity. If only one defined length is accessible, the short version can stay. |
+| T46 | `There are two limitations.` introduces a clear list. `The model predicts travel time.` uses a defined model. | KEEP both: no reader benefit from a mechanical subject rewrite or a more formal synonym. |
+| T47 | Notes establish only `d < (r1+r2)/2`; a proposed edit says `The larger the regions, the closer their centres.` | REJECT the new dependency; express the supplied inequality between named quantities. Keep legitimate comparative correlatives when a dependency is established. |
+| T48 | A figure labels selected extreme ratios of two estimates. A proposed caption calls them underestimating/overestimating sites without ground truth. | Preserve rank, ratio and selected subset. Keep underestimation language when an explicit justified reference is supplied; A4. |
+| T49 | A finite clause replaces an absolute construction after a comma, producing two independent clauses joined only by that comma. | Repair the full sentence boundary or retain the original; a locally fluent replacement is insufficient. Recheck neighbours after combining related edits. |

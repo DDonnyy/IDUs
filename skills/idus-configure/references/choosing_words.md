@@ -4,12 +4,14 @@ Choose the smallest wording change that resolves a concrete problem while preser
 Use [rules.md](rules.md) and [evidence_and_claims.md](evidence_and_claims.md) for the relevant IDs.
 
 1. Identify the intended actor, action, object, referent and measured quantity in the supplied context.
-2. Diagnose an actual ambiguity, collocation, grammar issue or active style requirement. A listed
-   token or an unusual construction alone is insufficient.
+2. Identify an ambiguity, collocation/grammar issue, active preference or concrete readability
+   benefit. A grammatical sentence can merit a STYLE proposal: name how the full replacement
+   clarifies an action, referent or relation. A listed token or formality alone is insufficient.
 3. Check the candidate against definitions, numbers, conditions, comparison direction and uncertainty.
    If intent or support is missing, ask instead of choosing a plausible scientific meaning.
-4. Reread the complete sentence and neighbours after replacement. Preserve useful repetition;
-   do not rotate technical terms just for variety.
+4. Reread the complete sentence and neighbours after combining related replacements. Check clause
+   boundaries, syntax and the claimed reader benefit. Preserve useful repetition; do not rotate
+   technical terms just for variety.
 
 | Situation | Decision |
 |---|---|
