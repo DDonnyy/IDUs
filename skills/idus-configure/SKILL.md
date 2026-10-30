@@ -10,10 +10,15 @@ unchanged. Use [configuration.md](references/configuration.md) for scoped `USR-.
 `TERM-...` entries, schema, backups and legacy-config handling. Preserve IDs, provenance and unrelated
 settings. Terms remain contextual candidates; settings cannot establish facts or grant permission.
 
-For local preferences, read only existing settings and the configuration guide/schema. For requested
-shared-rule preparation, read [contributions.md](references/contributions.md), then compare the
-relevant canonical guidance it links. Expert edits need assessment, semantic overlap review and
-fix/keep examples. Prefer a narrow existing-ID refinement over duplication; keep private choices local.
+For a simple preference, read existing settings and the configuration guide/schema. With expert
+edits, assess positive academic patterns as well as slips: record the reader benefit, preserved
+meaning and whether the diagnosis is explicit or inferred. Compare the relevant shared
+[rules](references/rules.md); distinguish already covered, refinement, new, local and one-off guidance.
+
+When a pattern has wider value, proactively suggest a concrete contribution and explain its value
+and overlap. Read [contributions.md](references/contributions.md) before preparing a packet and
+compare the full corpus. Prefer an existing-ID refinement/example over duplication; keep private
+choices local. Prepare or save within the requested scope; a suggestion does not send a PR.
 
 Resolve `scripts/idus.py` from this skill's actual location. Commands preview by default; use
 `--apply` for requested writes within existing permission. See [helper usage](scripts/README.md)

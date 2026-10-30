@@ -10,11 +10,6 @@ from schema_validation import ContractError, validate_contract
 PACKAGE_ROOT = Path(__file__).resolve().parent.parent
 CORPUS_FILES = (
     "rules.md",
-    "academic_writing.md",
-    "evidence_and_claims.md",
-    "lexicon.md",
-    "choosing_words.md",
-    "punctuation_and_spelling.md",
     "drafting.md",
 )
 RULE_START = re.compile(r"^(?:#{2,3}\s+|\*\*)([A-Z]+[0-9]+)\.\s+", re.M)

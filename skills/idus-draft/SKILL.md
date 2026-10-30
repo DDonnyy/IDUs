@@ -6,7 +6,9 @@ description: "Draft early English scientific manuscripts or sections from resear
 # Draft from research notes
 
 Follow [the compact writing guide](references/drafting.md). Existing prose is optional; use the
-author's research and intended claims. Compose only the requested scope, with coherent paragraphs,
+author's research and intended claims. Read the [shared writing core](references/rules.md#shared-writing-core)
+and only the definitions needed here; review uses the same corpus in greater depth. Compose the
+requested scope with coherent paragraphs,
 stable terms and preserved values, conditions, uncertainty and work status. Use specific TODOs/
 questions for missing support; do not invent research, citations or completed work.
 

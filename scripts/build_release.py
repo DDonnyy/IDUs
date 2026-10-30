@@ -15,15 +15,10 @@ ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY = "https://github.com/DDonnyy/IDUs"
 PUBLIC_NOTICES = ("LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md")
 SKILLS = ("idus-review", "idus-configure", "idus-draft")
-DRAFT_CORE = ("drafting.md", "checklists/draft_check.md", "examples/draft_case.md")
+DRAFT_CORE = ("drafting.md", "rules.md", "sources.md", "checklists/draft_check.md", "examples/draft_case.md")
 DRAFT_ASSETS = ("templates/draft_brief.md", "templates/draft_delivery.md")
 RULE_CORE = (
     "rules.md",
-    "academic_writing.md",
-    "evidence_and_claims.md",
-    "lexicon.md",
-    "choosing_words.md",
-    "punctuation_and_spelling.md",
     "sources.md",
 )
 REVIEW_CORE = (*RULE_CORE, "ALGORITHM.md", "configuration.md", "contracts.md", "checklists/final_check.md")
