@@ -1,6 +1,7 @@
 # Configuration helpers
 
 Python 3.10+, standard library. Resolve scripts from the actual installed skill directory.
+CLI output is UTF-8, including redirected stdout/stderr on Windows.
 
 ```text
 python scripts/idus.py config show WORKSPACE

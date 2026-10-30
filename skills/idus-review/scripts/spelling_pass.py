@@ -17,6 +17,8 @@ import argparse
 import re
 from pathlib import Path
 
+from cli_io import configure_utf8_output
+
 #: Oxford spelling: British forms, but -ize and -yse (analyse) as the OED and OUP write them.
 RULES = [
     (r"\banalyz(e|ed|es|ing)\b", r"analys\1"),
@@ -57,6 +59,7 @@ def protect(line: str) -> tuple[str, dict[str, str]]:
 
 
 def main() -> None:
+    configure_utf8_output()
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("files", nargs="+", type=Path)
     parser.add_argument("--stop-at", default=None)

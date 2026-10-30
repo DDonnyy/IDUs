@@ -10,7 +10,7 @@ import build_release
 from schema_validation import read_json
 from sync_distribution import MANIFESTS, sync
 
-SKIP = {".git", ".config", ".idus", ".paperidu", ".venv", "__pycache__", "dist", "tmp"}
+SKIP = {".git", ".config", ".idus", ".paperidu", ".venv", "__pycache__", "dist", "output", "tmp"}
 
 
 def check(root=build_release.ROOT, release_tag=None):

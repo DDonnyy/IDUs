@@ -1,5 +1,7 @@
 """Generated repository output is reproducible, checkable and cannot consume unrelated files."""
 
+import contextlib
+import io
 import json
 import shutil
 import sys
@@ -10,6 +12,7 @@ from pathlib import Path
 SCRIPTS = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SCRIPTS))
 import build_release
+import check_repository
 import sync_distribution
 
 
@@ -38,6 +41,17 @@ class DistributionSyncTests(unittest.TestCase):
         count, changed = sync_distribution.sync(self.root, write=True)
         self.assertGreater(changed, 0)
         self.assertEqual(sync_distribution.sync(self.root), (count, 0))
+
+    def test_repository_check_excludes_private_output_but_checks_public_markdown(self):
+        sync_distribution.sync(self.root, write=True)
+        private = self.root / "output/cache/README.md"
+        private.parent.mkdir(parents=True)
+        private.write_text("[Private cache link](missing-cache-file.md)\n```\n", encoding="utf-8")
+        with contextlib.redirect_stdout(io.StringIO()):
+            check_repository.check(self.root)
+        (self.root / "PUBLIC.md").write_text("[Broken public link](missing-public-file.md)\n", encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "missing-public-file"):
+            check_repository.check(self.root)
 
     def test_changed_generated_output_fails_check_and_can_be_regenerated(self):
         sync_distribution.sync(self.root, write=True)
