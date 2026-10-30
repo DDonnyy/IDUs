@@ -75,7 +75,7 @@ These cases explicitly request `draft`; do not run the detailed review workflow.
 | T41 | Draft skill alone is installed, with no Python or review/configure skill | Use the packaged compact guide/templates; keep installed files unchanged and do not depend on other skills |
 | T42 | User requests audit, but supplies only research notes | Identify missing review text and offer draft; do not silently replace the requested audit with composition |
 
-## Academic readability calibration (T43–T49)
+## Academic readability and shared guidance (T43–T50)
 
 Synthetic cases. A useful STYLE improvement can apply to grammatical prose; name its concrete
 reader benefit and preserve the scientific proposition. A clearer sentence need not be longer.
@@ -89,3 +89,4 @@ reader benefit and preserve the scientific proposition. A clearer sentence need 
 | T47 | Notes establish only `d < (r1+r2)/2`; a proposed edit says `The larger the regions, the closer their centres.` | REJECT the new dependency; express the supplied inequality between named quantities. Keep legitimate comparative correlatives when a dependency is established. |
 | T48 | A figure labels selected extreme ratios of two estimates. A proposed caption calls them underestimating/overestimating sites without ground truth. | Preserve rank, ratio and selected subset. Keep underestimation language when an explicit justified reference is supplied; A4. |
 | T49 | A finite clause replaces an absolute construction after a comma, producing two independent clauses joined only by that comma. | Repair the full sentence boundary or retain the original; a locally fluent replacement is insufficient. Recheck neighbours after combining related edits. |
+| T50 | A natural configure request supplies repeated expert improvements. A useful calibration could refine an existing ID and benefit other projects. | Compare the shared corpus, name the reader benefit and exceptions, and proactively suggest the concrete common-base refinement. Keep private choices local; an already-covered example needs a reference, not a fabricated new rule. Sending a PR remains a separate authorised action. |

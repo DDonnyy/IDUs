@@ -100,6 +100,21 @@ class ReleaseTests(unittest.TestCase):
             self.build()
         self.assertEqual(unexpected.read_text(encoding="utf-8"), "Do not erase.")
 
+    def test_all_modes_ship_the_same_complete_editorial_corpus(self):
+        _, plugin = self.build()
+        copies = [
+            (plugin / "skills" / name / "references/rules.md").read_bytes()
+            for name in build_release.SKILLS
+        ]
+        self.assertEqual(copies, [copies[0]] * len(copies))
+        self.assertEqual(
+            copies[0], (self.source / "rules.md").read_bytes().replace(b"\r\n", b"\n")
+        )
+        # Sharing definitions must not make draft run review or require its helpers.
+        draft = plugin / "skills/idus-draft"
+        self.assertFalse((draft / "references/ALGORITHM.md").exists())
+        self.assertFalse((draft / "scripts").exists())
+
     def test_copied_skills_work_independently_from_an_unrelated_workspace(self):
         products, _ = self.build()
         unrelated = self.root / "unrelated"

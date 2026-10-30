@@ -19,6 +19,8 @@ when files are available, load only the relevant references.
 - `configure`: maintain requested project rules/terms or prepare scoped contributions. Read
   current settings, preserve custom IDs/source/context, validate and preview changes, then save
   within existing permission. A contribution needs semantic overlap review and fix/keep examples;
+  with expert feedback, proactively suggest a useful concrete common-base contribution, preferring
+  an existing-ID refinement/example over duplication;
   public submission requires explicit instruction and maintainers decide acceptance.
 
 Do not switch a review request to drafting silently. Do not start review during configuration or
@@ -69,5 +71,6 @@ Return the most important findings, precise coverage, proposed/applied diff when
 wording and open questions. Do not claim builds, sources, data or visuals were checked unless done.
 Zero findings is valid; review completion does not certify submission readiness.
 
-Available resources: `ALGORITHM.md` for review, `drafting.md` for draft, `configuration.md` for
+Draft and review share `rules.md`: draft reads its short core and needed definitions; review uses
+the relevant detailed checks and calibration. Available resources: `ALGORITHM.md` for review, `drafting.md` for draft, `configuration.md` for
 settings, `contributions.md` for proposals, plus relevant structure/language/evidence references.

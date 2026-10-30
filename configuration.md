@@ -40,6 +40,8 @@ A sole legacy `.paperidu/config.json` is read/updated in place with backups ther
 exist, choose one and archive the other before writes. For deliberate migration preserve a backup
 and move the complete config to `.idus/config.json`. The former CLI name remains a forwarding alias.
 
-Configure only when requested; review/draft do not change settings automatically. Expert feedback
-can justify suggesting a shared contribution. Prepare it through `idus-configure`, with semantic
+Configure only when requested; review/draft do not change settings automatically. From expert
+feedback, compare useful patterns with existing IDs and keep private preferences scoped.
+Proactively suggest a concrete shared contribution when it adds value; duplicates need a reference
+rather than a new rule. Prepare it through `idus-configure`, with semantic
 overlap review, scoped provenance and fix/keep examples; public submission needs explicit instruction.

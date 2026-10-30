@@ -130,7 +130,7 @@ class ContributionTests(unittest.TestCase):
             shutil.copyfile(SCRIPTS.parent / relative, destination)
         proposal = self.ready()
         contributions.validate_proposal(proposal, root, ready=True)
-        with (root / "lexicon.md").open("a", encoding="utf-8") as stream:
+        with (root / "rules.md").open("a", encoding="utf-8") as stream:
             stream.write("\nA new contextual exception.\n")
         with self.assertRaisesRegex(ContractError, "current corpus"):
             contributions.validate_proposal(proposal, root, ready=True)
@@ -140,7 +140,7 @@ class ContributionTests(unittest.TestCase):
         result = contributions.overlap_candidates(self.proposal)
         self.assertEqual(self.proposal, before)
         self.assertTrue(any(item["rule_id"] == "B1" for item in result["candidates"]))
-        self.assertIn("lexicon.md", result["resources"])
+        self.assertIn("rules.md", result["resources"])
         self.assertNotIn("novel", result)
         self.assertNotIn("accepted", result)
 

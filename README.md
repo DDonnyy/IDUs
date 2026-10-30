@@ -20,7 +20,8 @@ For direct use without installation, copy [the standalone prompt](prompts/main_a
 [the draft prompt](prompts/draft_agent.md) / [configure prompt](prompts/configure_agent.md).
 
 The author supplies research and intended claims. Preserve uncertainty, defined terms, numbers and
-conditions; missing support stays explicit. Clear wording can remain unchanged. Style preferences
+conditions; missing support stays explicit. Draft and review share the same [writing rules](rules.md):
+draft uses the short core, while review follows relevant detailed checks. Clear wording can remain unchanged. Style preferences
 are scoped, and an expert edit is evidence to assess rather than a universal rule.
 
 Project settings live in `.idus/config.json` in the manuscript workspace. Shared-rule preparation
@@ -28,6 +29,9 @@ checks semantic overlap, provenance and fix/keep examples; maintainers decide ac
 See [settings](configuration.md), [contributions](contributions.md) and [source provenance](sources.md).
 
 ## Contribute and develop
+
+For a guide to mode transitions and canonical/generated sources, see the [skill map](docs/skill-map.md)
+and [file index](docs/file-index.md). These maintainer documents are outside the installed skills.
 
 Edit canonical sources, not generated `skills/`, then run:
 

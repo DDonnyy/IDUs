@@ -14,24 +14,12 @@ journal requirements and available project settings; private historical profiles
    Deliver the draft first and short notes in the author's language: section-level material mapping,
    meaningful assumptions, gaps and unchecked evidence. No per-sentence findings table is needed.
 
-## Compact writing core
+## Shared rules
 
-- **Introduction (IN1–IN7):** connect supplied context/research, supported gap and aim. Do not invent
-  an absence-of-research claim or pad the opening with generic significance.
-- **Methods (ME1–ME10):** explain actual material, selection, operations and analysis in recoverable
-  order. Missing reproducibility details remain TODOs; plans do not become completed procedures.
-- **Paragraphs (PA1–PA4):** develop a recognisable function, introduce concepts before use, connect
-  real relations and retain helpful technical repetition. No fixed sentence count or voice ban.
-- **Claims (EC1–EC10, RC1–RC5):** preserve values, units, denominators, conditions, comparison
-  direction and uncertainty. Scope Results, Discussion, Conclusion and Abstract to supplied work.
-  Do not turn aggregates into individual guarantees, comparison into validation or association
-  into causation. Metadata alone does not establish a source's findings.
-- **Language (A3, A6, B1, E1):** use direct precise English, stable terms and clear referents. Expand
-  explanations of supplied ideas without manufacturing scientific rationale.
-
-These are a compact projection of stable rules in the full toolkit: supplied Introduction/Methods
-teaching slides and scoped expert/reviewer feedback. Rhetorical moves are flexible functions;
-editorial examples are not independently verified scientific evidence.
+Read the [shared writing core](rules.md#shared-writing-core) and consult the same definitions and
+stable IDs as review. Load only the sections needed for the requested draft. Detailed checks and
+calibration in that corpus do not become an automatic sentence-by-sentence review during draft.
+There is no independent compact copy of the writing rules to update.
 
 Use `.idus/config.json`, or a sole legacy `.paperidu/config.json`, in the selected workspace.
 Report dual-config conflicts and unavailable inherited profiles rather than guessing preferences.

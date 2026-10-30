@@ -8,9 +8,9 @@ For requested preparation:
 
 1. Compare actual source versions, edits and comments. Distinguish an explicit expert diagnosis
    from an inferred reason; check preserved scientific meaning. A highlight alone is not a diagnosis.
-2. Compare existing local guidance and the full canonical corpus: [language](rules.md),
-   [structure](academic_writing.md), [evidence](evidence_and_claims.md), [lexicon](lexicon.md),
-   [word choice](choosing_words.md), [punctuation](punctuation_and_spelling.md) and [drafting](drafting.md).
+2. Compare existing local guidance and the full shared [writing corpus](rules.md), including
+   language, structure, evidence, candidates, replacement checks, punctuation and calibration,
+   plus [drafting](drafting.md).
    Read meanings and neighbouring rules, not only keyword matches. Check current upstream/open
    proposals when accessible and state when only a local snapshot was available.
 3. Classify duplicate/refines/conflicts/related/distinct. Reference a duplicate instead of adding
