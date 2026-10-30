@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Fixed Unicode output in Windows pipelines for configuration, proposal search, scanners and edit application.
+- Excluded ignored local review output and caches from public-document link checks.
+
 ## 0.8.0
 
 - Scoped each skill's references, examples and helpers to its task; resources load as needed.

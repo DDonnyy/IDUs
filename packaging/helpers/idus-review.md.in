@@ -1,6 +1,7 @@
 # Review helpers
 
 Optional Python 3.10+ standard-library tools. Resolve paths from this skill's actual directory.
+CLI output is UTF-8, including redirected stdout/stderr on Windows.
 
 ```text
 python scripts/idus.py config show WORKSPACE

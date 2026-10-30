@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 
 import configuration
+from cli_io import configure_utf8_output
 from schema_validation import ContractError, read_json
 
 
@@ -134,6 +135,7 @@ def run(args):
 
 
 def main():
+    configure_utf8_output()
     try:
         run(parser().parse_args())
     except (OSError, ValueError, UnicodeError) as error:
