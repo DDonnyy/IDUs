@@ -75,7 +75,7 @@ These cases explicitly request `draft`; do not run the detailed review workflow.
 | T41 | Draft skill alone is installed, with no Python or review/configure skill | Use the packaged compact guide/templates; keep installed files unchanged and do not depend on other skills |
 | T42 | User requests audit, but supplies only research notes | Identify missing review text and offer draft; do not silently replace the requested audit with composition |
 
-## Academic readability calibration (T43–T49)
+## Academic readability and shared guidance (T43–T50)
 
 Synthetic cases. A useful STYLE improvement can apply to grammatical prose; name its concrete
 reader benefit and preserve the scientific proposition. A clearer sentence need not be longer.
