@@ -11,8 +11,14 @@ journal requirements and available project settings; private historical profiles
    Ask only for missing decisions that determine the whole draft. Keep local gaps as specific
    `[TODO: ...]` / `[CITATION NEEDED: ...]` markers; a topic alone yields a labelled scaffold.
 3. Reread once for factual consistency and coherence: terms, facts, numbers, uncertainty and work status.
+   In the same reread, remove the [formulaic patterns](rules.md#formulaic-prose-patterns) FP1–FP9.
    Deliver the draft first and short notes in the author's language: section-level material mapping,
    meaningful assumptions, gaps and unchecked evidence. No per-sentence findings table is needed.
+
+Write without FP1–FP9 from the start: state relations with ordinary punctuation and verbs, put the
+claim in subject–verb order, name nouns and operations, and end a paragraph on its last point. A
+draft response to reviewers also follows [RR1–RR3](rules.md#responses-to-reviewers): it claims only
+changes that the final manuscript shows.
 
 ## Shared rules
 

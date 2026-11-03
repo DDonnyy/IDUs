@@ -85,17 +85,22 @@ def prepare_change(workspace, action, value=None, identifier=None):
                 raise ContractError(f"no custom entry {identifier!r}")
             collection.remove(found[0])
         else:
-            if not isinstance(value, dict) or not isinstance(value.get("id"), str):
-                raise ContractError("entry must be a JSON object with an id")
-            found = [entry for entry in collection if entry["id"] == value["id"]]
-            if action.startswith("add") and found:
-                raise ContractError(f"custom entry {value['id']} already exists; use update")
-            if action.startswith("update") and not found:
-                raise ContractError(f"no custom entry {value['id']} to update")
-            if found:
-                collection[collection.index(found[0])] = copy.deepcopy(value)
-            else:
-                collection.append(copy.deepcopy(value))
+            # An add also takes a list, such as a bundled rule set; the whole list is applied or none of it.
+            entries = value if action.startswith("add") and isinstance(value, list) else [value]
+            if not entries:
+                raise ContractError("entry list is empty")
+            for entry in entries:
+                if not isinstance(entry, dict) or not isinstance(entry.get("id"), str):
+                    raise ContractError("entry must be a JSON object with an id")
+                found = [item for item in collection if item["id"] == entry["id"]]
+                if action.startswith("add") and found:
+                    raise ContractError(f"custom entry {entry['id']} already exists; use update")
+                if action.startswith("update") and not found:
+                    raise ContractError(f"no custom entry {entry['id']} to update")
+                if found:
+                    collection[collection.index(found[0])] = copy.deepcopy(entry)
+                else:
+                    collection.append(copy.deepcopy(entry))
     else:
         raise ContractError(f"unknown configuration action {action}")
     validate_config(updated)

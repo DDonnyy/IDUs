@@ -1,6 +1,6 @@
 # IDUs file index
 
-This checkout has **162 public files**, including **72 managed generated files**.
+This checkout has **164 public files**, including **73 managed generated files**.
 Private outputs, source archives and project settings are excluded. This index is maintainer
 documentation and is not loaded or bundled by the installed skills.
 
@@ -50,6 +50,7 @@ while review follows detailed checks. See the [skill map](skill-map.md) for tran
 | [evals/activation.json](../evals/activation.json) | Skill-selection scenarios and expected activation boundaries. | repository only |
 | [examples/configuration/config.json](../examples/configuration/config.json) | Complete synthetic project configuration. | C |
 | [examples/configuration/custom-rule.json](../examples/configuration/custom-rule.json) | Synthetic scoped USR rule entry. | C |
+| [examples/configuration/formulaic-prose-rules.json](../examples/configuration/formulaic-prose-rules.json) | Opt-in strict USR-FP rules for the formulaic prose patterns; added as a list. | C |
 | [examples/configuration/custom-term.json](../examples/configuration/custom-term.json) | Synthetic contextual TERM entry. | C |
 | [examples/configuration/profile.json](../examples/configuration/profile.json) | Synthetic profile patch. | C |
 | [examples/contributions/proposal.json](../examples/contributions/proposal.json) | Proposal contract example with deliberately pending reviews. | C |
@@ -123,6 +124,7 @@ use; they are not copied into installed skills.
 | [skills/idus-configure/examples/configuration/config.json](../skills/idus-configure/examples/configuration/config.json) | [examples/configuration/config.json](../examples/configuration/config.json) | Complete synthetic project configuration. |
 | [skills/idus-configure/examples/configuration/custom-rule.json](../skills/idus-configure/examples/configuration/custom-rule.json) | [examples/configuration/custom-rule.json](../examples/configuration/custom-rule.json) | Synthetic scoped USR rule entry. |
 | [skills/idus-configure/examples/configuration/custom-term.json](../skills/idus-configure/examples/configuration/custom-term.json) | [examples/configuration/custom-term.json](../examples/configuration/custom-term.json) | Synthetic contextual TERM entry. |
+| [skills/idus-configure/examples/configuration/formulaic-prose-rules.json](../skills/idus-configure/examples/configuration/formulaic-prose-rules.json) | [examples/configuration/formulaic-prose-rules.json](../examples/configuration/formulaic-prose-rules.json) | Opt-in strict USR-FP rules for the formulaic prose patterns. |
 | [skills/idus-configure/examples/configuration/profile.json](../skills/idus-configure/examples/configuration/profile.json) | [examples/configuration/profile.json](../examples/configuration/profile.json) | Synthetic profile patch. |
 | [skills/idus-configure/examples/contributions/proposal.json](../skills/idus-configure/examples/contributions/proposal.json) | [examples/contributions/proposal.json](../examples/contributions/proposal.json) | Proposal contract example with deliberately pending reviews. |
 | [skills/idus-configure/references/configuration.md](../skills/idus-configure/references/configuration.md) | [configuration.md](../configuration.md) | Scoped project settings, USR/TERM entries, previews, revisions, backups and expert-feedback routing. |

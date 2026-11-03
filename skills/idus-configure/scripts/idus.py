@@ -36,7 +36,9 @@ def parser():
         item = actions.add_parser(action)
         item.add_argument("workspace", type=Path)
         if action in {"set-profile", "import", "add-rule", "update-rule", "add-term", "update-term"}:
-            item.add_argument("input", type=Path, help="JSON patch, configuration, or single custom entry")
+            item.add_argument(
+                "input", type=Path, help="JSON patch, configuration, custom entry, or a list of entries to add"
+            )
         elif action.startswith("remove"):
             item.add_argument("identifier")
         if action not in {"show", "validate"}:

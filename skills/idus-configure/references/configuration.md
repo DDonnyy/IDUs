@@ -28,7 +28,14 @@ python scripts/idus.py scan-terms WORKSPACE text-export.txt
 ```
 
 Mutations preview by default; use `--apply` within existing permission. Use separate update/remove
-commands for existing IDs; add never silently replaces. `set-profile` patches profile fields;
+commands for existing IDs; add never silently replaces. `add-rule` and `add-term` also accept a
+JSON list and apply all of its entries or none.
+
+The configure skill ships one such list, `examples/configuration/formulaic-prose-rules.json`: the
+formulaic patterns FP1–FP9 of the [shared rules](rules.md#formulaic-prose-patterns) as strict
+`USR-FP...` rules. Add it only when the author wants every occurrence reported. Without it, review
+treats these patterns as STYLE checks and draft avoids them. Disable a single rule by updating its
+status. `set-profile` patches profile fields;
 `import` restores a valid configuration/backup as a new revision. Previous exact bytes are retained
 in `.idus/backups/<sha256>.json`; stale prepared changes are rejected. Saves use a staged replacement,
 not a lock against every concurrent editor. Unchanged settings do not increment the revision.

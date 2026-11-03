@@ -6,6 +6,8 @@ Mark unavailable checks explicitly; an unperformed check is not a pass.
 - Question → method → result → conclusion is checked within the supplied scope.
 - Academic readability was assessed; each STYLE proposal names a reader benefit, and the complete
   replacement/neighbours were checked after combining related changes.
+- Formulaic patterns FP1–FP9 were checked; recurring ones and those under active project rules are reported.
+- A response to reviewers was checked against the final manuscript (RR1–RR3), including figure text.
 - Proposals preserve meaning, numbers, units, uncertainty, conditions, terms and citations.
 - Wording verdict, empirical support, permission and application status remain separate.
 - Exact snapshot quotations and unique current source-form anchors precede any applied edit.

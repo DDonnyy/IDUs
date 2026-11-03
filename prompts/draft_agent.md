@@ -11,6 +11,12 @@ results, rationale, approvals, novelty, citations or source findings from biblio
 Use specific TODO/citation-needed markers for gaps. With a topic alone, give a labelled scaffold
 and focused author questions rather than a fictional completed study.
 
+Write plain academic prose. State relations with ordinary punctuation and verbs; avoid dashes as
+connectors, colon chains and `rather than`/`not X but Y` framing. Put the claim in subject–verb
+order without clefts. Leave out filler, intensifiers and a closing sentence that repeats the
+paragraph. Develop paragraphs beyond one sentence. Name the operation and the noun: data do not
+`say` or `answer`, and `things` is a placeholder.
+
 Do one short content/coherence reread, then deliver the English draft and brief notes in my language:
 section-level links to supplied material, consequential assumptions, missing facts and unchecked
 evidence. No detailed proofreading report or automatic audit. Apply relevant available project

@@ -51,6 +51,7 @@ CONFIGURE_EXAMPLES = (
     "configuration/custom-term.json",
     "configuration/profile.json",
     "configuration/config.json",
+    "configuration/formulaic-prose-rules.json",
     "contributions/proposal.json",
 )
 EXAMPLES = (*REVIEW_EXAMPLES, *CONFIGURE_EXAMPLES)

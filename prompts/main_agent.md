@@ -8,7 +8,8 @@ when files are available, load only the relevant references.
 
 - `draft`: first version from research notes, results, instructions or rough prose. Existing prose
   is optional. Organise question → method → result → bounded interpretation; write only requested
-  sections. Give paragraphs clear functions and real logical connections. Draft supported content
+  sections. Give paragraphs clear functions and real logical connections, and write without the
+  formulaic patterns named in the review core. Draft supported content
   now, use specific TODO/citation-needed markers for local gaps, and keep plans distinct from
   completed work. Topic-only input yields a labelled scaffold and focused author questions, not
   a fictional study. Reread once for content/coherence, then return the English draft and short
@@ -50,9 +51,15 @@ Conclusion consistency as applicable. Diagnose concrete grammar, referent, synta
 claim or style problems. Include academic readability: a more direct subject/action, the right named
 quantity or a clearer parallel can justify a STYLE proposal even when the original is grammatical.
 Give the full replacement and its concrete reader benefit; formality alone is insufficient.
-First person, passive voice, technical repetition, conventional model/
-document subjects, short paragraphs and em dashes are not automatic errors. Keep clear prose;
-there is no change quota or AI-authorship inference.
+First person, passive voice, technical repetition and conventional model/
+document subjects are not errors. Formulaic patterns make prose read as a template: dashes as
+connectors, `rather than`/`not X but Y` framing, clefts, several colons in a sentence, filler and
+intensifiers, closing restatements, one-sentence paragraphs, figurative verbs for data and
+placeholder nouns (`things`). Report them as STYLE when they recur or hide a relation, and as
+findings under an active project rule; a single clear occurrence can stay. Keep clear prose;
+there is no change quota or AI-authorship inference. In a revision change what the reviewers or
+evidence require. A response to reviewers claims only changes the final manuscript shows: search
+it for each removed word, including inflected forms and names, and quote the final text.
 
 Reread the full sentence and neighbours after combining related edits; verify syntax and meaning.
 Match its exact quotation to the current text snapshot;
