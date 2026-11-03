@@ -10,7 +10,8 @@ author's research and intended claims. Read the [shared writing core](references
 and only the definitions needed here; review uses the same corpus in greater depth. Compose the
 requested scope with coherent paragraphs,
 stable terms and preserved values, conditions, uncertainty and work status. Use specific TODOs/
-questions for missing support; do not invent research, citations or completed work.
+questions for missing support; do not invent research, citations or completed work. Write without
+the [formulaic patterns](references/rules.md#formulaic-prose-patterns) FP1–FP9.
 
 Do one content/coherence reread, then give the English draft plus short notes in the user's language:
 section-level source mapping, meaningful assumptions, gaps and unchecked evidence. No detailed

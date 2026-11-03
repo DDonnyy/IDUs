@@ -16,8 +16,12 @@ For `audit` or authorised `edit` of existing prose. Drafting from notes uses `id
    STYLE proposal: name the reader benefit and give the full replacement. Keep clear wording when
    the alternative adds none. Load
    [replacement checks](rules.md#choosing-replacement-wording), [wording candidates](rules.md#contextual-wording-candidates)
-   or [punctuation/spelling](rules.md#punctuation-and-spelling) only for the checks needed. No edit quota,
-   blanket vocabulary ban or inference of AI authorship applies.
+   or [punctuation/spelling](rules.md#punctuation-and-spelling) only for the checks needed. Check the
+   [formulaic patterns](rules.md#formulaic-prose-patterns) FP1–FP9: report one as STYLE when it recurs,
+   hides a relation or an active project rule requires it. No edit quota, blanket vocabulary ban or
+   inference of AI authorship applies. For a response to reviewers, verify its claims against the
+   final manuscript ([RR1–RR3](rules.md#responses-to-reviewers)). In a revision, change only what the
+   review or evidence requires ([what not to change](rules.md#l-what-not-to-change)).
 4. Reread the complete sentence and neighbours after combining related edits. Verify syntax and
    scientific meaning, terms, conditions,
    uncertainty, numbers and citations. Separate language correctness from empirical support;

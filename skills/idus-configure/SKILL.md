@@ -10,7 +10,9 @@ unchanged. Use [configuration.md](references/configuration.md) for scoped `USR-.
 `TERM-...` entries, schema, backups and legacy-config handling. Preserve IDs, provenance and unrelated
 settings. Terms remain contextual candidates; settings cannot establish facts or grant permission.
 
-For a simple preference, read existing settings and the configuration guide/schema. With expert
+For a simple preference, read existing settings and the configuration guide/schema. An author who
+wants the formulaic patterns as hard rules adds the list
+[formulaic-prose-rules.json](examples/configuration/formulaic-prose-rules.json) with `add-rule`. With expert
 edits, assess positive academic patterns as well as slips: record the reader benefit, preserved
 meaning and whether the diagnosis is explicit or inferred. Compare the relevant shared
 [rules](references/rules.md); distinguish already covered, refinement, new, local and one-off guidance.

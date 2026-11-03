@@ -4,6 +4,7 @@ One brief reread after composing; use [drafting.md](../drafting.md), not the ful
 
 - [ ] The draft covers the requested scope and reflects the author's question and supplied research.
 - [ ] Paragraphs have clear functions, definitions precede use, and connections express real logic.
+- [ ] The text is free of the formulaic patterns FP1–FP9 in [rules.md](../rules.md#formulaic-prose-patterns).
 - [ ] Numerical values, units, denominators, conditions, terms, uncertainty and comparison direction match the notes.
 - [ ] Plans/hypotheses remain distinct from completed work and observed findings.
 - [ ] No invented methods/results, novelty, citations, statistical tests or approvals fill a gap.

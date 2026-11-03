@@ -77,6 +77,20 @@ class ConfigurationTests(unittest.TestCase):
         self.save("remove-rule", identifier=self.rule["id"])
         self.assertEqual(configuration.load_config(self.workspace)[2]["rules"], [])
 
+    def test_bundled_rule_list_is_added_whole_or_not_at_all(self):
+        rules = read_json(SCRIPTS.parent / "examples/configuration/formulaic-prose-rules.json")
+        self.save("add-rule", self.rule)
+        target, _ = self.save("add-rule", rules)
+        saved = configuration.load_config(self.workspace)[2]["rules"]
+        self.assertEqual([entry["id"] for entry in saved], [self.rule["id"], *[entry["id"] for entry in rules]])
+        previous = target.read_bytes()
+        with self.assertRaises(ContractError):
+            configuration.prepare_change(self.workspace, "add-rule", [{**self.rule, "id": "USR-NEW"}, rules[0]])
+        with self.assertRaises(ContractError):
+            configuration.prepare_change(self.workspace, "add-rule", [])
+        self.assertEqual(target.read_bytes(), previous)
+        self.assertEqual(len(configuration.load_config(self.workspace)[2]["rules"]), len(rules) + 1)
+
     def test_reserved_namespace_and_unknown_override_fields_are_rejected(self):
         with self.assertRaises(ContractError):
             configuration.prepare_change(self.workspace, "add-rule", {**self.rule, "id": "A1"})

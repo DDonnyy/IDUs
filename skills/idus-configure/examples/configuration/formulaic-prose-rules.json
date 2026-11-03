@@ -1,0 +1,146 @@
+[
+  {
+    "id": "USR-FP1",
+    "title": "No dashes as connectors",
+    "category": "STYLE",
+    "instruction": "Do not use em dashes or spaced dashes to join clauses or insert asides. State the relation with a comma, colon, parentheses or a new sentence.",
+    "context": "Editable prose, captions and figure labels. Ranges keep en dashes; compounds keep hyphens; minus signs stay.",
+    "rationale": "A dash used as the default connector leaves the relation between the parts unstated.",
+    "source": {"kind": "author", "reference": "Strict project variant of IDUs FP1 (rules.md, formulaic prose patterns); opt-in."},
+    "status": "active",
+    "examples": [
+      {
+        "original": "The fit improves — the error falls by a third.",
+        "preferred": "The fit improves: the error falls by a third."
+      }
+    ]
+  },
+  {
+    "id": "USR-FP2",
+    "title": "No contrastive framing",
+    "category": "STYLE",
+    "instruction": "Do not use 'rather than', 'not X but Y' or 'X and not Y'. State the positive claim; when two alternatives are compared, name both and the comparison.",
+    "context": "Editable prose. Preserve negation, comparison direction and scope when recasting.",
+    "rationale": "The frame sets a claim against an alternative the text never proposed and adds no information.",
+    "source": {"kind": "author", "reference": "Strict project variant of IDUs FP2; opt-in."},
+    "status": "active",
+    "examples": [
+      {
+        "original": "We fit one constant per mode rather than per city.",
+        "preferred": "We fit one constant per mode, shared by all cities."
+      }
+    ]
+  },
+  {
+    "id": "USR-FP3",
+    "title": "No clefts",
+    "category": "STYLE",
+    "instruction": "Do not use 'It is X that ...' or 'What ... is ...' sentences. Use subject-verb order.",
+    "context": "Editable prose. Keep conditional force and do not add exclusivity when recasting.",
+    "rationale": "A cleft delays the claim and adds emphasis the evidence may not support.",
+    "source": {"kind": "author", "reference": "Strict project variant of IDUs FP3; opt-in."},
+    "status": "active",
+    "examples": [
+      {
+        "original": "It is the network, not the waits, that explains most of the gap.",
+        "preferred": "The network explains most of the gap; the waits explain little of it."
+      }
+    ]
+  },
+  {
+    "id": "USR-FP4",
+    "title": "At most one colon per sentence",
+    "category": "STYLE",
+    "instruction": "Use no more than one colon in a prose sentence. Split the sentence or let the verb carry the relation.",
+    "context": "Prose sentences. Ratios, times, labels, URLs and mathematical notation do not count.",
+    "rationale": "Chained colons stack announcements and hide the structure of the claim.",
+    "source": {"kind": "author", "reference": "Strict project variant of IDUs FP4; opt-in."},
+    "status": "active",
+    "examples": [
+      {
+        "original": "Two results stand out: first, coverage is low: a third of the stops are missing.",
+        "preferred": "Two results stand out. First, coverage is low: a third of the stops are missing."
+      }
+    ]
+  },
+  {
+    "id": "USR-FP5",
+    "title": "No filler or intensifiers",
+    "category": "STYLE",
+    "instruction": "Remove 'Importantly', 'Notably', 'It is worth noting that', 'plays a crucial role' and emphatic 'essential' or 'key'. State the specific relation or quantity instead.",
+    "context": "Editable prose. Keep 'key' as a technical term and 'essential' with a stated criterion.",
+    "rationale": "Emphasis words add length without content and make every sentence equally loud.",
+    "source": {"kind": "author", "reference": "Strict project variant of IDUs FP5; opt-in."},
+    "status": "active",
+    "examples": [
+      {
+        "original": "Importantly, waiting time plays a crucial role in accessibility.",
+        "preferred": "Waiting time changes accessibility by up to a tenth."
+      }
+    ]
+  },
+  {
+    "id": "USR-FP6",
+    "title": "No closing restatement",
+    "category": "STYLE",
+    "instruction": "Delete a final sentence that only repeats the paragraph ('Overall, ...', 'This highlights ...', 'Taken together, ...'). Keep it only when it states a new, supported inference.",
+    "context": "Paragraph endings in all sections.",
+    "rationale": "A restatement repeats what the reader has just read.",
+    "source": {"kind": "author", "reference": "Strict project variant of IDUs FP6; opt-in."},
+    "status": "active",
+    "examples": [
+      {
+        "original": "Coverage is lowest in small towns. Overall, this highlights the importance of coverage.",
+        "preferred": "Coverage is lowest in small towns."
+      }
+    ]
+  },
+  {
+    "id": "USR-FP7",
+    "title": "No one-sentence paragraphs",
+    "category": "STRUCTURE",
+    "instruction": "Merge a single-sentence paragraph with the paragraph it serves or develop it into a full paragraph.",
+    "context": "Body text. Headings, list items and displayed equations are not paragraphs.",
+    "rationale": "An isolated sentence used for emphasis or transition breaks the argument into fragments.",
+    "source": {"kind": "author", "reference": "Strict project variant of IDUs FP7; opt-in."},
+    "status": "active",
+    "examples": [
+      {
+        "original": "Figure 3 shows the distribution.",
+        "preferred": "Move the sentence into the paragraph that discusses the distribution."
+      }
+    ]
+  },
+  {
+    "id": "USR-FP8",
+    "title": "No figurative verbs for data and methods",
+    "category": "LANGUAGE",
+    "instruction": "Do not give data, methods, figures or values human or physical actions ('say', 'answer', 'rest on', 'walk', 'emerge', 'arrive'). Name the operation.",
+    "context": "Editable prose and captions. Conventional technical subjects such as 'The model predicts' and 'Table 2 lists' stay.",
+    "rationale": "A figurative verb makes the reader translate it back into the operation that was performed.",
+    "source": {"kind": "author", "reference": "Strict project variant of IDUs FP8; opt-in."},
+    "status": "active",
+    "examples": [
+      {
+        "original": "The ferry estimate rests on four sites.",
+        "preferred": "The ferry estimate is based on four sites."
+      }
+    ]
+  },
+  {
+    "id": "USR-FP9",
+    "title": "No placeholder nouns",
+    "category": "LANGUAGE",
+    "instruction": "Replace 'things', 'aspects', 'issues' and bare numerals used as nouns with the noun they stand for.",
+    "context": "Editable prose, especially sentences that open a list or refer back to groups.",
+    "rationale": "A placeholder makes the reader recover a noun the writer already knows.",
+    "source": {"kind": "author", "reference": "Strict project variant of IDUs FP9; opt-in."},
+    "status": "active",
+    "examples": [
+      {
+        "original": "Two things follow for anyone using the data.",
+        "preferred": "Two consequences follow for anyone using the data."
+      }
+    ]
+  }
+]

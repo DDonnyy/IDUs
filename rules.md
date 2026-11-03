@@ -18,11 +18,15 @@ corpus. Source provenance and limits remain in [sources.md](sources.md).
   empirical support. Defined terms, notation and captions retain their actual meaning.
 - Apply current scoped preferences and consistent spelling; private past choices are not defaults.
   Use D1–D3, F1–F2, G1–G5 and the punctuation/spelling section when needed.
+- Write without the formulaic patterns FP1–FP9: dashes as connectors, contrastive framing, clefts,
+  colon chains, filler, closing restatements, one-sentence paragraphs, figurative verbs and
+  placeholder nouns. A response to reviewers also follows RR1–RR3.
 
 Read selectively: [language checks](#language-checks), [academic calibration](#academic-readability-calibration),
 [section structure](#section-structure-and-coherence), [evidence](#evidence-and-claim-safeguards),
-[replacement checks](#choosing-replacement-wording), [wording candidates](#contextual-wording-candidates)
-and [punctuation/spelling](#punctuation-and-spelling). The short core routes to these definitions;
+[replacement checks](#choosing-replacement-wording), [wording candidates](#contextual-wording-candidates),
+[punctuation/spelling](#punctuation-and-spelling), [formulaic patterns](#formulaic-prose-patterns)
+and [responses to reviewers](#responses-to-reviewers). The short core routes to these definitions;
 it is not a separately maintained set of rules. Detailed review findings belong in the review output.
 
 ## Language checks
@@ -39,7 +43,9 @@ A grammatical sentence can still merit a readability improvement. Source familie
 subjects such as `The model predicts` or `This section describes` are valid.
 
 **A2. Technical senses.** Resolve a real ambiguity between ordinary and technical meanings; retain
-correct defined terms such as graph sparsity or set intersection.
+correct defined terms such as graph sparsity or set intersection. `Tenfold` means ten times, not
+ten cross-validation folds; `divides the sites by size` can read as arithmetic where `classifies
+the sites according to size` is meant; `either` can mean each of two or one of two.
 
 **A3. Stable terminology.** Use each defined term for the same object. Do not introduce synonyms
 that could imply another quantity or method.
@@ -67,7 +73,9 @@ accessible referent in context; naming it in the same paragraph is not compulsor
 operations or findings could be intended.
 
 **B4. Backward references.** Replace `former/latter`, `here/there` or `one/other` with nouns when
-resolving them imposes a real reading cost.
+resolving them imposes a real reading cost. `Former` and `latter` select from two items only. A bare
+numeral or ordinal used as a noun (`the two`, `the last three`, `the second`) needs its noun when
+several groups, cases or methods could be meant: `The last three cases differ in distance`.
 
 ## C. Sentence structure
 
@@ -148,7 +156,9 @@ Preserve grouping.
 observation within it are different; inspect code/configuration before asserting whisker endpoints.
 
 **G4. Header consistency.** Use the same term for the same quantity in text, tables and captions.
-Update dependent source keys if an authorised header change requires them.
+Update dependent source keys if an authorised header change requires them. Text drawn inside a
+figure counts too: axis titles, legends, tick labels, panel and place names, counts and numbering
+must match the text and tables. Check the plotting code or the rendered image, not only the caption.
 
 **G5. Informative headers.** Name column contents without unnecessary caption duplication; inspect
 rendered layout after changes that can alter widths.
@@ -174,6 +184,8 @@ can understand, without promises stronger than the supplied work.
 
 **M2. Limitations.** Give each distinct limitation and its interpretive consequence. Avoid empty
 repetition, but retain necessary qualifications and recheck whether a limitation is still current.
+A limitation the study did not observe is stated as a possibility (`may`) or omitted, not as a
+finding. Do not append a consequence the limitation already makes evident.
 
 **M3. Submission notes.** Remove identified internal editorial notes only within authorised
 submission cleanup. TeX comments and escaped percent signs can affect output; never delete all `%`.
@@ -187,6 +199,11 @@ Protect defined terms, numerical content, equations, citations, names and code i
 Respect accepted human edits unless a specific error/conflict is demonstrated. Report scientific
 discrepancies separately from wording. No edit quota or inference of AI authorship applies.
 
+In a revision, change what the reviewers, the editor or new evidence require, plus demonstrated
+errors. Do not move sentences, add consequence clauses, examples or claims for polish. An
+unsupported sentence is hedged or removed; a new sentence needs its own support. Changing one
+occurrence of an established term leaves the text inconsistent: change all of them or none.
+
 ## Minimal calibration
 
 | Input/proposal | Decision |
@@ -196,6 +213,10 @@ discrepancies separately from wording. No edit quota or inference of AI authorsh
 | `The vehicle spends 200 metres accelerating.` | Consider `covers 200 metres while accelerating`; A1 |
 | `Every study we know of` → `Every known study` | Reject: removes the authors' knowledge limit; A6 |
 | `The relations are missing` → `Only the relations are missing` | Reject without support: adds exclusivity; A6 |
+| `The step explains almost none of the spread` → `accounts for almost none` | Keep: established statistical sense of `explain`; A2 |
+| `Adding the second condition as well leaves six sites` → `Adding the second condition leaves six sites as well` | Reject: moving `as well` changes what it adds to; C7 |
+| `as few as an eighth of the places` → `as little as an eighth of the places` | Reject: `places` is countable, so `few`/`many`; correctness |
+| An editor removes one of two commas around a parenthetical clause | Reject: paired commas stay together or go together |
 
 ## Academic readability calibration
 
@@ -210,6 +231,11 @@ it does not establish that the grammatical original was an error. Retain a clear
 | `There are two limitations.` introduces a clear two-item list. | Keep: a short existential introduction is useful; C2 does not ban there are. |
 | Notes establish only `d < (r1+r2)/2`; proposal: `The larger the regions, the closer their centres.` | Reject the new dependency. Write `The centroid distance is less than the mean radius of the two regions.` Keep a comparative correlative when the supplied evidence actually establishes the dependency; C8. |
 | A figure labels selected extreme ratios between two estimates, with no ground truth: `The underestimating and overestimating sites are labelled.` | Consider `The sites with the lowest and highest ratios are labelled.` Preserve rank and the selected subset; A4. Keep accuracy language with an explicit justified reference. |
+| An absolute construction carries a condition: `…of the records, a record entering the fit when it has a timestamp.` | Consider `…of the records; a record is included in the fit when it has a timestamp.` A finite clause names the action; C4. |
+| A defined ratio: `When the ratio is below one, the clusters overlap.` | Consider `When the ratio is less than one, …`: `below` can also read as a place in the document; D3. |
+| `The full distribution is in Figure 4.` | Consider `The full distribution is shown in Figure 4.` A verb states what the figure does; register. |
+| `We have found no precedent in the literature on coverage.` | Consider `To the best of our knowledge, the literature on coverage does not discuss this case.` The knowledge limit stays explicit; A6, IN4. |
+| Two approaches compared: `The first needs traffic data; the second works without it.` | Consider `That approach needs traffic data, while ours works without it.` Nouns replace ordinals when the referents are far apart; B4. |
 
 ## Section structure and coherence
 Use the relevant section, not a compulsory template. Empirical, theoretical, software and review
@@ -317,6 +343,8 @@ change is authorised. Watch added exclusivity, priority, causality and undefined
 ## EC2. Give numerical statements their full meaning
 Retain value, unit, numerator/denominator, metric direction, population, period/budget, aggregation
 and uncertainty. Identify the exact missing condition rather than inferring it from proximity.
+When a table or summary leaves out some units, say how many and why. When a share is computed over
+a subset, such as the records of some sources only, name that subset in the sentence.
 
 ## EC3. Keep the direction and criterion of a comparison
 Establish what is compared, the baseline and whether higher/lower is better. Without the actual
@@ -371,7 +399,9 @@ conditions needed to interpret headline numbers; use venue constraints only when
 
 **RC5. Figures/tables:** compare labels, units, legends, captions and displayed values. Verify plot
 definitions from the actual configuration and inspect changed output; extracted text alone is not
-visual verification.
+visual verification. A series that equals the reference by construction, such as an estimate
+divided by itself, is drawn as a reference line, not as data. Tick and scale labels name the
+plotted quantity: `twice as far` misdescribes a ratio of counts.
 
 ## Choosing replacement wording
 Choose the smallest wording change that resolves a concrete problem while preserving the claim.
@@ -409,6 +439,17 @@ are generalised editorial illustrations, not assertions about a particular manus
 |---|---|---|
 | `spends` with a distance | Inappropriate collocation? | `covers … while` |
 | `knows`, `decides`, `holds` with data | Is the recorded relation clear? | `records`, `contains`, `estimates` |
+| `says`, `gives`, `answers`, `needs`, `rests on`, `arrives` with data, methods or figures | Physical or human action for a non-human subject? FP8 | `shows`, `provides`, `is based on`, `requires` |
+| `enters`, `takes part in` with a sample, fit or analysis | Inclusion meant? | `is included in`, `is used in` |
+| `tenfold`, `fourfold` | Multiplication, or folds/variants? A2 | `ten folds`, `four variants` |
+| `divides … by` for grouping | Arithmetic division or classification? A2 | `classifies … according to` |
+| `either` | Each of two, or one of two? A2 | `each`, `one of the two` |
+| `former`, `latter` | Exactly two candidates? B4 | `the last three cases`, the noun |
+| `is in Table N`, `are in Figure N` | Locative copula for a display? | `is shown in`, `are given in` |
+| `one and the same`, `has nothing to do with`, `commonest`, `mixes` | Informal register? A5 | `the same`, `is not related to`, `most common`, `combines` |
+| `fuller`, `more fully`, `describes best` | Extent presented as quality? EC5 | the measured coverage or share |
+| `confirmed` for another study's result | Did that study test this claim? EC7 | `found`, `reached a similar result` |
+| `things`, `aspects`, `issues` | Placeholder for a nameable noun? FP9 | `consequences`, the named quantity |
 | `cost` | Computational cost, distance or measured effect? | Name the actual quantity |
 | `sparse` | Defined graph property or little coverage? | Keep technical sparsity; otherwise name coverage |
 | `distance`, `intersection`, `boundary` | Technical sense or ordinary meaning? | Specify the intended difference/operation |
@@ -439,11 +480,18 @@ not universal language-error rules.
 - Assess introductory clauses/phrases by function and ambiguity. No blanket comma after every
   short opener, `So` or `Yet`. An inverted subject is not automatically a detached introduction.
 - Separate complex list items with semicolons where useful; retain their logical grouping.
+- Put a comma before `and`, `but`, `while` or `whereas` that joins two independent clauses:
+  `The map lists 70 sites, and 55 of them have records.` Coordinated predicates sharing one subject
+  take no comma between them unless a list or clarity needs it.
+- Two independent clauses joined by a comma alone, including `, however,`, are a comma splice. Use a
+  semicolon, a conjunction or two sentences.
+- Commas around a parenthetical element come in pairs; add or remove both.
 
 ## Dashes and colons
 
 Dashes, parentheses and colons can express different relations and emphasis. Recast only for
-clarity or the active style; avoid changing claim scope. An em dash is not an error by itself.
+clarity or the active style; avoid changing claim scope. An em dash is not an error by itself;
+dashes used as the default connector are FP1, and several colons in one sentence are FP4.
 
 ## Spelling variety
 
@@ -457,3 +505,78 @@ Scanners list candidates and cannot reliably distinguish all these cases.
 Preserve precision, units, denominators and conditions. Follow known formatting conventions for
 percentages, ranges and units without silently rounding or changing the quantity. Check changed
 source/output where punctuation, TeX spacing or a caption/header edit can affect rendering.
+
+- Write one quantity in one form within a paragraph: not `84 per cent`, `0.33 to 0.97` and `two
+  thirds` for the same share. Verbal fractions suit approximate values next to exact ones.
+- Name recurring conditions such as time budgets in the same form throughout: `30 minutes`
+  everywhere, not alternately `half an hour`.
+- Typeset a negative value with a minus sign and a numeric range with an en dash, in tables as
+  in prose. Use the decimal point of English text, not a decimal comma.
+- Keep the unit when a value is repeated in a comparison (`reaches 83 per cent, while …`) and use
+  `respectively` when two lists are paired.
+
+## Formulaic prose patterns
+
+These patterns make academic prose read as a template: the same contrastive frame, emphasis or
+connector appears whatever the content, and the actual relation is left for the reader to rebuild.
+They occur in human and generated text alike; a match says nothing about authorship. Sources:
+[S-AUTHOR](sources.md#s-author), [S-TEACHER](sources.md#s-teacher), [S-CUS-R1R3](sources.md#s-cus-r1r3).
+
+- Draft writes without them from the start.
+- Review reports a pattern as STYLE when it recurs within a section, when it hides a relation the
+  reader must reconstruct, or when an active project rule requires it. A single clear occurrence
+  can stay. Give the full replacement and keep the claim, as for any STYLE proposal.
+- Authors who want hard rules add the strict set `examples/configuration/formulaic-prose-rules.json`
+  of the configure skill to their project settings; each occurrence is then a finding.
+
+**FP1. Dash as connector.** A dash joins clauses or inserts an aside where a comma, colon,
+parentheses or a new sentence would state the relation. Use that punctuation or two sentences.
+Keep en dashes in ranges, hyphens in compounds, minus signs and a dash the venue style requires.
+
+**FP2. Contrastive framing.** `Rather than`, `not X but Y`, `X and not Y` and `instead of` set a claim
+against an alternative the text never proposed. State the positive claim. Keep the contrast when
+the text actually weighs both alternatives, and keep negation and comparison direction (EC1).
+
+**FP3. Clefts.** `It is X that …` and `What … is …` delay the claim. Use subject–verb order. Keep a
+cleft that corrects a likely misreading, and preserve conditional force (C6).
+
+**FP4. Colon chains.** More than one colon in a sentence, or a colon that only announces what the
+verb could say. Split the sentence or let the verb carry the relation. Ratios, times, labels and
+notation are not prose colons.
+
+**FP5. Filler and intensifiers.** `Importantly`, `Notably`, `It is worth noting that`, `plays a
+crucial role`, `essential` or `key` as emphasis. Delete them or state the specific relation or
+quantity. Keep `key` as a technical term and `essential` with a stated criterion.
+
+**FP6. Closing restatement.** A final sentence that repeats the paragraph (`Overall, …`, `This
+highlights …`, `Taken together, …`). Delete it, or state the new inference with its support. Keep a
+synthesis that adds what the separate sentences do not.
+
+**FP7. One-sentence paragraphs.** An isolated sentence used for emphasis or transition. Merge it with
+the paragraph it serves or develop it (C11). Keep a short paragraph with its own function.
+
+**FP8. Figurative verbs and agency.** Human or physical actions for data, methods and figures: the
+data `say` or `answer`, a value `rests on` four cases, a procedure `walks` the boundaries, a site
+`emerges` from the records. Name the operation: `shows`, `is based on`, `examines`, `is identified`.
+Keep conventional technical subjects such as `The model predicts` and `Table 2 lists` (A1).
+
+**FP9. Placeholder nouns.** `Things`, `aspects`, `issues` or a bare numeral standing for a noun the
+reader must recover: `Two things follow` → `Two consequences follow`. Name the noun (B4).
+
+## Responses to reviewers
+
+Use when drafting or reviewing a response letter or a list of changes. A response makes factual
+claims about the final manuscript. Source: [S-AUDITS](sources.md#s-audits).
+
+**RR1. Verify every claim of change.** `X no longer occurs`, `every legend now …` and `Section 6 now
+states …` are checked by searching the final text, including inflected and derived forms, names,
+captions and text inside figures. `Fuller no longer occurs` is false while `fully` remains; a claim
+that a term was removed must name a cited name or defined term that keeps it.
+
+**RR2. Check what a manuscript edit answers.** Before deleting or rewriting a sentence during a
+revision, check whether the response quotes it or uses it to answer a reviewer. Keep the
+reviewer's point in the new wording or update the response; deleting it silently makes `Agreed
+and added` false.
+
+**RR3. Quote the final version.** Manuscript quotations, section, table, figure and equation
+numbers, and counts in the response match the final build. Recheck them after every late edit.

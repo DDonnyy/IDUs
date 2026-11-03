@@ -20,7 +20,9 @@ python scripts/idus.py validate-report report.json --snapshot doc-1=text-export.
 ```
 
 Configuration mutations preview by default; explicit `--apply` persists an authorised change and
-retains previous bytes. Existing IDs need an update command. See
+retains previous bytes. Existing IDs need an update command. `add-rule`/`add-term` also take a JSON
+list of entries, such as the configure skill's `examples/configuration/formulaic-prose-rules.json`,
+and apply all of them or none. See
 [configuration.md](../configuration.md) for the complete workflow and examples. The custom term
 scanner is read-only and makes no promise to distinguish every quoted term, name, or code string.
 

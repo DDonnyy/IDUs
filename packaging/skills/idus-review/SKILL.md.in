@@ -12,7 +12,8 @@ Follow [the review workflow](references/ALGORITHM.md). Read the supplied argumen
 then assess academic readability as well as correctness. A grammatical sentence can merit a STYLE
 proposal when a clearer action, referent or parallel has a concrete reader benefit; name that benefit.
 Use the same writing corpus as draft, loading its relevant detailed checks and calibration.
-Preserve scientific
+Check the formulaic patterns FP1–FP9 and, for a response to reviewers, RR1–RR3 against the final
+manuscript. Preserve scientific
 meaning, uncertainty, numerical conditions and defined terms. Keep wording/evidence/application
 statuses separate. Clear prose can remain unchanged; there is no edit quota.
 

@@ -42,11 +42,29 @@ explicit parallels and named quantities. Reasons inferred from edits are analyst
 Public examples are synthetic; useful readability improvements are distinguished from mandatory
 grammar repairs and private house style.
 
+A second comparison covered the whole revised manuscript: 115 edits accepted, 40 of them with a
+correction of a slip, and 20 declined with reasons. It supports the comma, numeral, register,
+absolute-construction and figure-label refinements (B4, C4, D3, G4, punctuation, numbers) and the
+reject cases in the minimal calibration. Declined edits are evidence that an expert edit can change
+meaning; they are not counted as rules.
+
 ## S-AUDITS
 
 Historical agent analyses of those materials. They supply failure/keep examples and safeguards
 against lost hedges, added exclusivity, reversed comparisons and unsupported aggregate claims.
 These are interpretations to assess, not original reviewer verdicts or model-performance evidence.
+A later check of a response to reviewers against the final manuscript found claims of removed
+wording that inflected forms or cited names contradicted, and a planned deletion that would have
+undone an answer to a reviewer. It supports RR1–RR3 and the subset/exclusion note in EC2.
+
+## S-AUTHOR
+
+An author's style decisions across two manuscripts and their revisions: which proposals were
+accepted or declined in revision, and which constructions the author removed from drafts. Supports
+the formulaic patterns FP1–FP9, the revision restraint in L and the M2 note on unobserved
+limitations. A journal reviewer's independent requests (no single-sentence paragraphs, no
+figurative verbs for data) agree with FP7 and FP8. Treating these as hard rules is a preference: the shared corpus uses them as STYLE
+checks, and the strict set is opt-in.
 
 ## S-PROJECT
 
